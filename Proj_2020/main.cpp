@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "Car.h"
+#include "Person.h"
 
 using namespace std;
 

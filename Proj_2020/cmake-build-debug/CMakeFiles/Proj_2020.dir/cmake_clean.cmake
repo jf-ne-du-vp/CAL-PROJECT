@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Proj_2020.dir/Car.cpp.o"
   "CMakeFiles/Proj_2020.dir/Person.cpp.o"
   "CMakeFiles/Proj_2020.dir/main.cpp.o"
   "Proj_2020"

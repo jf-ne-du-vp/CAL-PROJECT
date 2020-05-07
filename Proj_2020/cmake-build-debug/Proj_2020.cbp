@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Car.cpp">
+			<Option target="Proj_2020"/>
+		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Car.h">
+			<Option target="Proj_2020"/>
+		</Unit>
 		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Person.cpp">
 			<Option target="Proj_2020"/>
 		</Unit>

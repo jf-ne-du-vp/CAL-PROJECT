@@ -123,6 +123,33 @@ Proj_2020/fast:
 	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/build
 .PHONY : Proj_2020/fast
 
+Car.o: Car.cpp.o
+
+.PHONY : Car.o
+
+# target to build an object file
+Car.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Car.cpp.o
+.PHONY : Car.cpp.o
+
+Car.i: Car.cpp.i
+
+.PHONY : Car.i
+
+# target to preprocess a source file
+Car.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Car.cpp.i
+.PHONY : Car.cpp.i
+
+Car.s: Car.cpp.s
+
+.PHONY : Car.s
+
+# target to generate assembly for a file
+Car.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Car.cpp.s
+.PHONY : Car.cpp.s
+
 Person.o: Person.cpp.o
 
 .PHONY : Person.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Proj_2020"
+	@echo "... Car.o"
+	@echo "... Car.i"
+	@echo "... Car.s"
 	@echo "... Person.o"
 	@echo "... Person.i"
 	@echo "... Person.s"
