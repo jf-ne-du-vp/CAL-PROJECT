@@ -16,7 +16,7 @@ public:
     double getNIF() const;
     void setNIF(double nif);
     double getDestiny() const;
-    void setDestiny(double destiny;
+    void setDestiny(double destiny);
 
     /*
      * probably want to add time of arrival to station (need to figure out how to store hour)

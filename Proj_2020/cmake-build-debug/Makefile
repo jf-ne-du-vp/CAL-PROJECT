@@ -123,6 +123,33 @@ Proj_2020/fast:
 	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/build
 .PHONY : Proj_2020/fast
 
+BuildGraph.o: BuildGraph.cpp.o
+
+.PHONY : BuildGraph.o
+
+# target to build an object file
+BuildGraph.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o
+.PHONY : BuildGraph.cpp.o
+
+BuildGraph.i: BuildGraph.cpp.i
+
+.PHONY : BuildGraph.i
+
+# target to preprocess a source file
+BuildGraph.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/BuildGraph.cpp.i
+.PHONY : BuildGraph.cpp.i
+
+BuildGraph.s: BuildGraph.cpp.s
+
+.PHONY : BuildGraph.s
+
+# target to generate assembly for a file
+BuildGraph.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/BuildGraph.cpp.s
+.PHONY : BuildGraph.cpp.s
+
 Car.o: Car.cpp.o
 
 .PHONY : Car.o
@@ -149,6 +176,33 @@ Car.s: Car.cpp.s
 Car.cpp.s:
 	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Car.cpp.s
 .PHONY : Car.cpp.s
+
+Graph.o: Graph.cpp.o
+
+.PHONY : Graph.o
+
+# target to build an object file
+Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Graph.cpp.o
+.PHONY : Graph.cpp.o
+
+Graph.i: Graph.cpp.i
+
+.PHONY : Graph.i
+
+# target to preprocess a source file
+Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Graph.cpp.i
+.PHONY : Graph.cpp.i
+
+Graph.s: Graph.cpp.s
+
+.PHONY : Graph.s
+
+# target to generate assembly for a file
+Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Graph.cpp.s
+.PHONY : Graph.cpp.s
 
 Person.o: Person.cpp.o
 
@@ -213,9 +267,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Proj_2020"
+	@echo "... BuildGraph.o"
+	@echo "... BuildGraph.i"
+	@echo "... BuildGraph.s"
 	@echo "... Car.o"
 	@echo "... Car.i"
 	@echo "... Car.s"
+	@echo "... Graph.o"
+	@echo "... Graph.i"
+	@echo "... Graph.s"
 	@echo "... Person.o"
 	@echo "... Person.i"
 	@echo "... Person.s"
