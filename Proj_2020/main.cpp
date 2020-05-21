@@ -24,12 +24,18 @@ int main() {
 
     GraphViewer* gv = creategraphViewer(graph);
 
-    graph->dijkstraShortestPath(1);
-    vector<Vertex *> v1 = graph->getPath(1, 15);
+    graph->dijkstraShortestPath(0);
+    vector<Vertex *> v1 = graph->getPath(0, 250);
     cout << "o tamanho do caminho e: " << v1.size() << endl;
     sleep(5);
     showPathInGraph(gv, v1);
 
+    //path total km
+    int d = 0;
+    for(int i = 0; i < v1.size(); i++){
+        d += v1[i]->getDist();
+    }
+    cout << "total dist: " << d << endl;
     getchar();
 
     gv->closeWindow();
