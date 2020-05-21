@@ -132,7 +132,7 @@ vector<Vertex *> Graph::getPath(const int &origin, const int &dest) const{
 
     for ( ; v != nullptr; v = v->path)
         res.push_back(v);
-    cout << "o tam: " << res.size() << endl;
+
     reverse(res.begin(), res.end());
     return res;
 }

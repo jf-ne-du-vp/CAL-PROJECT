@@ -27,6 +27,7 @@ int main() {
     graph->dijkstraShortestPath(1);
     vector<Vertex *> v1 = graph->getPath(1, 15);
     cout << "o tamanho do caminho e: " << v1.size() << endl;
+    sleep(5);
     showPathInGraph(gv, v1);
 
     getchar();
