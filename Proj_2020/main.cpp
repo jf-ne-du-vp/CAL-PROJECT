@@ -21,10 +21,8 @@ int main() {
 
     cout << "Grafo lido tem " << graph->getNumVertex() << " vertices." << endl;
 
-    //GraphViewer* gv = creategraphViewer(graph);
-    sleep(15);
+    GraphViewer* gv = creategraphViewer(graph);
 
-    //gv->closeWindow();
-    //free(gv);
+
     return 0;
 }

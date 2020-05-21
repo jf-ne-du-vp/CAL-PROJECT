@@ -96,6 +96,21 @@
 		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h">
 			<Option target="Proj_2020"/>
 		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/connection.cpp">
+			<Option target="Proj_2020"/>
+		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/connection.h">
+			<Option target="Proj_2020"/>
+		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/edgetype.h">
+			<Option target="Proj_2020"/>
+		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.cpp">
+			<Option target="Proj_2020"/>
+		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.h">
+			<Option target="Proj_2020"/>
+		</Unit>
 		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/MutablePriorityQueue.h">
 			<Option target="Proj_2020"/>
 		</Unit>

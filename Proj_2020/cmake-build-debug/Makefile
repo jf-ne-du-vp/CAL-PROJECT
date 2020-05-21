@@ -204,6 +204,60 @@ Graph.cpp.s:
 	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Graph.cpp.s
 .PHONY : Graph.cpp.s
 
+GraphViewer/connection.o: GraphViewer/connection.cpp.o
+
+.PHONY : GraphViewer/connection.o
+
+# target to build an object file
+GraphViewer/connection.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.o
+.PHONY : GraphViewer/connection.cpp.o
+
+GraphViewer/connection.i: GraphViewer/connection.cpp.i
+
+.PHONY : GraphViewer/connection.i
+
+# target to preprocess a source file
+GraphViewer/connection.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.i
+.PHONY : GraphViewer/connection.cpp.i
+
+GraphViewer/connection.s: GraphViewer/connection.cpp.s
+
+.PHONY : GraphViewer/connection.s
+
+# target to generate assembly for a file
+GraphViewer/connection.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.s
+.PHONY : GraphViewer/connection.cpp.s
+
+GraphViewer/graphviewer.o: GraphViewer/graphviewer.cpp.o
+
+.PHONY : GraphViewer/graphviewer.o
+
+# target to build an object file
+GraphViewer/graphviewer.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o
+.PHONY : GraphViewer/graphviewer.cpp.o
+
+GraphViewer/graphviewer.i: GraphViewer/graphviewer.cpp.i
+
+.PHONY : GraphViewer/graphviewer.i
+
+# target to preprocess a source file
+GraphViewer/graphviewer.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.i
+.PHONY : GraphViewer/graphviewer.cpp.i
+
+GraphViewer/graphviewer.s: GraphViewer/graphviewer.cpp.s
+
+.PHONY : GraphViewer/graphviewer.s
+
+# target to generate assembly for a file
+GraphViewer/graphviewer.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.s
+.PHONY : GraphViewer/graphviewer.cpp.s
+
 Person.o: Person.cpp.o
 
 .PHONY : Person.o
@@ -303,6 +357,12 @@ help:
 	@echo "... Graph.o"
 	@echo "... Graph.i"
 	@echo "... Graph.s"
+	@echo "... GraphViewer/connection.o"
+	@echo "... GraphViewer/connection.i"
+	@echo "... GraphViewer/connection.s"
+	@echo "... GraphViewer/graphviewer.o"
+	@echo "... GraphViewer/graphviewer.i"
+	@echo "... GraphViewer/graphviewer.s"
 	@echo "... Person.o"
 	@echo "... Person.i"
 	@echo "... Person.s"

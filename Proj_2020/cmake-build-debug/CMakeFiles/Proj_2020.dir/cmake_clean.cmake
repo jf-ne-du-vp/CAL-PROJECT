@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o"
   "CMakeFiles/Proj_2020.dir/Car.cpp.o"
   "CMakeFiles/Proj_2020.dir/Graph.cpp.o"
+  "CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.o"
+  "CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o"
   "CMakeFiles/Proj_2020.dir/Person.cpp.o"
   "CMakeFiles/Proj_2020.dir/UserInterface.cpp.o"
   "CMakeFiles/Proj_2020.dir/main.cpp.o"

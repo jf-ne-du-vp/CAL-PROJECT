@@ -1,21 +1,20 @@
 #include "UserInterface.h"
-/*
+
 GraphViewer* creategraphViewer(const Graph* graph){
-    GraphViewer* gv = new GraphViewer(600, 600, false);
-    gv->createWindow(600, 600);
+    auto* gv = new GraphViewer(900, 900, false);
+    gv->createWindow(900, 900);
     gv->defineVertexColor("blue");
     gv->defineEdgeColor("black");
     gv->defineEdgeCurved(false);
-    for (Vertex* vertex : graph->getVertexSet()) {
-        gv->addNode(vertex->getID(), (int) vertex->getX() - 527500, (int) vertex->getY() - 4555555);
+    for (Vertex* vertex : graph->getVertexSet()){
+        gv->addNode(vertex->getID(), (int) vertex->getX() + 15 , (int) vertex->getY() + 12);
+    }
 
-        for (Vertex *vertex : graph->getVertexSet()) {
-            for (Edge *edge : vertex->getAdj()) {
-                gv->addEdge(edge->getID(), vertex->getID(), edge->getDest()->getID(), EdgeType::UNDIRECTED);
-                gv->setEdgeWeight(edge->getID(), (int) edge->getWeight());
-            }
+    for(Vertex* vertex : graph->getVertexSet()){
+        for(Edge* edge : vertex->getAdj()){
+            gv->addEdge(edge->getID(), vertex->getID(), edge->getDest()->getID(), EdgeType::DIRECTED);
         }
     }
     gv->rearrange();
-    return gv;
-}*/
+    return 0;
+}

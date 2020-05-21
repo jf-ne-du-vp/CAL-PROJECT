@@ -135,6 +135,32 @@ CMakeFiles/Proj_2020.dir/UserInterface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj_2020.dir/UserInterface.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/UserInterface.cpp -o CMakeFiles/Proj_2020.dir/UserInterface.cpp.s
 
+CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.o: CMakeFiles/Proj_2020.dir/flags.make
+CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.o: ../GraphViewer/connection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.o -c /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/connection.cpp
+
+CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/connection.cpp > CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.i
+
+CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/connection.cpp -o CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.s
+
+CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o: CMakeFiles/Proj_2020.dir/flags.make
+CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o: ../GraphViewer/graphviewer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o -c /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.cpp
+
+CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.cpp > CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.i
+
+CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.cpp -o CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.s
+
 # Object files for target Proj_2020
 Proj_2020_OBJECTS = \
 "CMakeFiles/Proj_2020.dir/main.cpp.o" \
@@ -142,7 +168,9 @@ Proj_2020_OBJECTS = \
 "CMakeFiles/Proj_2020.dir/Car.cpp.o" \
 "CMakeFiles/Proj_2020.dir/Graph.cpp.o" \
 "CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o" \
-"CMakeFiles/Proj_2020.dir/UserInterface.cpp.o"
+"CMakeFiles/Proj_2020.dir/UserInterface.cpp.o" \
+"CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.o" \
+"CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o"
 
 # External object files for target Proj_2020
 Proj_2020_EXTERNAL_OBJECTS =
@@ -153,9 +181,11 @@ Proj_2020: CMakeFiles/Proj_2020.dir/Car.cpp.o
 Proj_2020: CMakeFiles/Proj_2020.dir/Graph.cpp.o
 Proj_2020: CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o
 Proj_2020: CMakeFiles/Proj_2020.dir/UserInterface.cpp.o
+Proj_2020: CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.o
+Proj_2020: CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o
 Proj_2020: CMakeFiles/Proj_2020.dir/build.make
 Proj_2020: CMakeFiles/Proj_2020.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Proj_2020"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Proj_2020"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Proj_2020.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

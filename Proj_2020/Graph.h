@@ -32,7 +32,7 @@ class Vertex{
 
 
     double dist = 0;
-    Vertex *path = nullptr;
+    Vertex *path = NULL;
     int queueIndex = 0; 		// required by MutablePriorityQueue
 
     bool visited = false;		// auxiliary field

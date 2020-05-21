@@ -13,6 +13,14 @@ CMakeFiles/Proj_2020.dir/Graph.cpp.o
  /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.cpp
  /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
  /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/MutablePriorityQueue.h
+CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.o
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/connection.cpp
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/connection.h
+CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/connection.h
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/edgetype.h
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.cpp
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.h
 CMakeFiles/Proj_2020.dir/Person.cpp.o
  /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Person.cpp
  /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Person.h

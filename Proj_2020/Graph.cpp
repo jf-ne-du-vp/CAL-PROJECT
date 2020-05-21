@@ -66,11 +66,11 @@ Vertex* Graph::findVertex(int ID) const{
     for(auto v : vertexSet){
         if(v->ID == ID) return v;
     }
-    return nullptr;
+    return NULL;
 }
 
 bool Graph::addVertex(int ID, double x, double y){
-    if(findVertex(ID) != nullptr) return false;
+    if(findVertex(ID) != NULL) return false;
 
     vertexSet.push_back(new Vertex(ID, x, y));
     return true;
@@ -80,7 +80,7 @@ bool Graph::addEdge(int edgeID, int srcID, int destID, double weight){
      auto v1 = findVertex(srcID);
      auto v2 = findVertex(destID);
 
-     if(v1 == nullptr || v2 == nullptr) return false;
+     if(v1 == NULL || v2 == NULL) return false;
 
      v1->addEdge(edgeID, v2, weight);
      return true;
@@ -101,7 +101,7 @@ void Graph::dijkstraShortestPath(int srcID){
 
     for(auto v : vertexSet){
         v->dist = INF;
-        v->path = nullptr;
+        v->path = NULL;
     }
 
     s->dist = 0;
