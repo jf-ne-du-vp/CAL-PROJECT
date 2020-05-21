@@ -3,20 +3,40 @@
 GraphViewer* creategraphViewer(const Graph* graph){
     auto* gv = new GraphViewer(900, 900, false);
     gv->createWindow(900, 900);
-    gv->defineVertexColor("blue");
-    gv->defineEdgeColor("grey");
-    gv->defineEdgeCurved(false);
+    gv->defineVertexColor("BLUE");
+    gv->defineEdgeColor("BLACK");
+    gv->defineEdgeCurved(true);
     for (Vertex* vertex : graph->getVertexSet()){
-        gv->addNode(vertex->getID(), (int) vertex->getX() +15 , (int) vertex->getY() +15);
+        gv->addNode(vertex->getID(), (int) vertex->getX() , (int) vertex->getY());
     }
 
     for(Vertex* vertex : graph->getVertexSet()){
         for(Edge* edge : vertex->getAdj()){
             gv->addEdge(edge->getID(), vertex->getID(), edge->getDest()->getID(), EdgeType::DIRECTED);
-            gv->setEdgeWeight(edge->getID(), (int)edge->getWeight());
+            //gv->setEdgeWeight(edge->getID(), (int)edge->getWeight());
         }
     }
     gv->rearrange();
 
     return gv;
+}
+
+
+void showPathInGraph(GraphViewer* gv, const vector<Vertex*>& path){
+    for (int i = 0; i < path.size() - 1; i++) {
+        gv->setVertexColor(path[i]->getID(), RED);
+        for (Edge* e : path[i]->getAdj()) {
+            if (e->getDest() == path[i + 1]) {
+                gv->setEdgeColor(e->getID(), RED);
+                break;
+            }
+        }
+    }
+    if (path.size() == 0)
+        return;
+    gv->setVertexColor(path[0]->getID(), WHITE);
+    if (path.size() == 1)
+        return;
+    gv->setVertexColor(path[path.size() - 1]->getID(), BLACK);
+    gv->rearrange();
 }

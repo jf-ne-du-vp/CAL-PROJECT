@@ -122,3 +122,17 @@ void Graph::dijkstraShortestPath(int srcID){
         }
     }
 }
+
+
+vector<Vertex *> Graph::getPath(const int &origin, const int &dest) const{
+    vector<Vertex *> res;
+    auto v = findVertex(dest);
+    if (v == nullptr || v->dist == INF) // missing or disconnected
+        return res;
+
+    for ( ; v != nullptr; v = v->path)
+        res.push_back(v);
+    cout << "o tam: " << res.size() << endl;
+    reverse(res.begin(), res.end());
+    return res;
+}

@@ -87,6 +87,8 @@ public:
     int getNumVertex() const;
     vector<Vertex *> getVertexSet() const;
 
+    vector<Vertex *> getPath(const int &origin, const int &dest) const;
+
     //algorithms
     void dijkstraShortestPath(int srcID);
 };
