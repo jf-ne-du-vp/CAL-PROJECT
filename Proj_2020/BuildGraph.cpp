@@ -52,6 +52,7 @@ Graph* buildGraph(string nodePath, string edgePath){
         getline(iss, midS, ')');
         y = stod(midS);
 
+
         graph->addVertex(ID, x, y);
     }
 
