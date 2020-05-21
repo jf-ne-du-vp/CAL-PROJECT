@@ -21,6 +21,11 @@ CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o: ../GraphViewer/edgetype.
 CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o: ../GraphViewer/graphviewer.cpp
 CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.o: ../GraphViewer/graphviewer.h
 
+CMakeFiles/Proj_2020.dir/Path.cpp.o: ../Graph.h
+CMakeFiles/Proj_2020.dir/Path.cpp.o: ../MutablePriorityQueue.h
+CMakeFiles/Proj_2020.dir/Path.cpp.o: ../Path.cpp
+CMakeFiles/Proj_2020.dir/Path.cpp.o: ../Path.h
+
 CMakeFiles/Proj_2020.dir/Person.cpp.o: ../Person.cpp
 CMakeFiles/Proj_2020.dir/Person.cpp.o: ../Person.h
 

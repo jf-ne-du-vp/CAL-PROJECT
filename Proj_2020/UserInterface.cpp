@@ -37,6 +37,6 @@ void showPathInGraph(GraphViewer* gv, const vector<Vertex*>& path){
     gv->setVertexColor(path[0]->getID(), WHITE);
     if (path.size() == 1)
         return;
-    gv->setVertexColor(path[path.size() - 1]->getID(), BLACK);
+    gv->setVertexColor(path[path.size() - 1]->getID(), GREEN);
     gv->rearrange();
 }

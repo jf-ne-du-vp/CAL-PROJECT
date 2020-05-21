@@ -26,7 +26,7 @@ int main() {
 
     graph->dijkstraShortestPath(0);
     vector<Vertex *> v1 = graph->getPath(0, 250);
-    cout << "o tamanho do caminho e: " << v1.size() << endl;
+    cout << "VErtices visitados: " << v1.size() << endl;
     sleep(5);
     showPathInGraph(gv, v1);
 
@@ -35,7 +35,7 @@ int main() {
     for(int i = 0; i < v1.size(); i++){
         d += v1[i]->getDist();
     }
-    cout << "total dist: " << d << endl;
+    cout << "Dist total percorrida: " << d << endl;
     getchar();
 
     gv->closeWindow();
