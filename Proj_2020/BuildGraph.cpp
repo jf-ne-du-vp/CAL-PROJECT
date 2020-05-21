@@ -82,12 +82,7 @@ Graph* buildGraph(string nodePath, string edgePath){
         getline(iss, midS, ')');
         destID = stoi(midS);
 
-
-        Vertex* src = graph->findVertex(srcID);
-        Vertex* dest = graph->findVertex(destID);
-
-        double dist = euclidianDistance(src, dest);
-        graph->addEdge(i, srcID, destID, dist);
+        graph->addEdge(i, srcID, destID, euclidianDistance(graph->findVertex(srcID), graph->findVertex(destID)));
     }
 
     edges.close();

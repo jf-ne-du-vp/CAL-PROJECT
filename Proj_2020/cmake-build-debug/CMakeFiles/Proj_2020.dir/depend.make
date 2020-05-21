@@ -16,10 +16,22 @@ CMakeFiles/Proj_2020.dir/Graph.cpp.o: ../MutablePriorityQueue.h
 CMakeFiles/Proj_2020.dir/Person.cpp.o: ../Person.cpp
 CMakeFiles/Proj_2020.dir/Person.cpp.o: ../Person.h
 
+CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../Graph.h
+CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../GraphViewer/connection.h
+CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../GraphViewer/edgetype.h
+CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../GraphViewer/graphviewer.h
+CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../MutablePriorityQueue.h
+CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../UserInterface.cpp
+CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../UserInterface.h
+
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../BuildGraph.h
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../Car.h
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../Graph.h
+CMakeFiles/Proj_2020.dir/main.cpp.o: ../GraphViewer/connection.h
+CMakeFiles/Proj_2020.dir/main.cpp.o: ../GraphViewer/edgetype.h
+CMakeFiles/Proj_2020.dir/main.cpp.o: ../GraphViewer/graphviewer.h
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../MutablePriorityQueue.h
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../Person.h
+CMakeFiles/Proj_2020.dir/main.cpp.o: ../UserInterface.h
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../main.cpp
 

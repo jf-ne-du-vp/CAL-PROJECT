@@ -231,6 +231,33 @@ Person.cpp.s:
 	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Person.cpp.s
 .PHONY : Person.cpp.s
 
+UserInterface.o: UserInterface.cpp.o
+
+.PHONY : UserInterface.o
+
+# target to build an object file
+UserInterface.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/UserInterface.cpp.o
+.PHONY : UserInterface.cpp.o
+
+UserInterface.i: UserInterface.cpp.i
+
+.PHONY : UserInterface.i
+
+# target to preprocess a source file
+UserInterface.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/UserInterface.cpp.i
+.PHONY : UserInterface.cpp.i
+
+UserInterface.s: UserInterface.cpp.s
+
+.PHONY : UserInterface.s
+
+# target to generate assembly for a file
+UserInterface.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/UserInterface.cpp.s
+.PHONY : UserInterface.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -279,6 +306,9 @@ help:
 	@echo "... Person.o"
 	@echo "... Person.i"
 	@echo "... Person.s"
+	@echo "... UserInterface.o"
+	@echo "... UserInterface.i"
+	@echo "... UserInterface.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
