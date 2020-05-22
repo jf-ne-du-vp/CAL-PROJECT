@@ -3,11 +3,12 @@
 GraphViewer* creategraphViewer(const Graph* graph){
     auto* gv = new GraphViewer(900, 900, false);
     gv->createWindow(900, 900);
-    gv->defineVertexColor("BLUE");
+    gv->defineVertexColor("Yellow");
     gv->defineEdgeColor("BLACK");
-    gv->defineEdgeCurved(true);
+    gv->defineEdgeCurved(false);
     for (Vertex* vertex : graph->getVertexSet()){
         gv->addNode(vertex->getID(), (int) vertex->getX() , (int) vertex->getY());
+        gv->setVertexLabel(vertex->getID(), to_string(vertex->getID()));
     }
 
     for(Vertex* vertex : graph->getVertexSet()){
@@ -34,7 +35,7 @@ void showPathInGraph(GraphViewer* gv, const vector<Vertex*>& path){
     }
     if (path.size() == 0)
         return;
-    gv->setVertexColor(path[0]->getID(), WHITE);
+    gv->setVertexColor(path[0]->getID(), PINK);
     if (path.size() == 1)
         return;
     gv->setVertexColor(path[path.size() - 1]->getID(), GREEN);

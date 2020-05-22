@@ -17,16 +17,21 @@ int main() {
     cout << endl << "             Fast and safe transportation" << endl << endl << endl;
 
     //maybe main menu
-    Graph* graph = buildGraph("../Maps/GridGraphs/16x16/nodes.txt", "../Maps/GridGraphs/16x16/edges.txt");
-    //Graph* graph = buildGraph("../Maps/PortugalMaps/Porto/nodes_x_y_porto.txt", "../Maps/PortugalMaps/Porto/edges_Porto.txt");
+    //Graph* graph = buildGraph("../Maps/GridGraphs/16x16/nodes.txt", "../Maps/GridGraphs/16x16/edges.txt");
+    //Graph* graph = buildGraph("../Maps/PortugalMaps/Espinho/nodes_x_y_porto.txt", "../Maps/PortugalMaps/Espinho/edges_Porto.txt");
+    //Graph* graph = buildGraph("../Maps/MapaPorto/porto_strong_nodes_xy.txt", "../Maps/MapaPorto/porto_strong_edges.txt");
+    Graph* graph = buildGraph("../Maps/MapaEspinho/espinho_full_nodes_xy.txt", "../Maps/MapaEspinho/espinho_full_edges.txt");
 
     cout << "Grafo lido tem " << graph->getNumVertex() << " vertices." << endl;
 
     GraphViewer* gv = creategraphViewer(graph);
 
-    graph->dijkstraShortestPath(0);
-    vector<Vertex *> v1 = graph->getPath(0, 250);
-    cout << "VErtices visitados: " << v1.size() << endl;
+
+    //graph->dijkstraShortestPath(27744);
+    //vector<Vertex *> v1 = graph->getPath(27744, 26781);
+    graph->dijkstraShortestPath(2783);
+    vector<Vertex *> v1 = graph->getPath(2783, 6765);
+    cout << "Vertices visitados: " << v1.size() << endl;
     sleep(5);
     showPathInGraph(gv, v1);
 

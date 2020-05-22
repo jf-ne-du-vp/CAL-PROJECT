@@ -6,22 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/BuildGraph.h
-iostream
--
-string
--
-iomanip
--
-sstream
--
-fstream
--
-Graph.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
-
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Car.h
-
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
 iostream
 -
@@ -86,29 +70,13 @@ connection.h
 vector
 -
 
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Person.h
-string
--
-
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/UserInterface.h
-GraphViewer/graphviewer.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.h
-Graph.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
-
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/main.cpp
-iostream
--
-Car.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Car.h
-Person.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Person.h
-Graph.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
-BuildGraph.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/BuildGraph.h
-GraphViewer/graphviewer.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.h
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/UserInterface.cpp
 UserInterface.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/UserInterface.h
+
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/UserInterface.h
+GraphViewer/graphviewer.h
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.h
+Graph.h
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
 
