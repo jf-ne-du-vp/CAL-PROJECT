@@ -1,5 +1,6 @@
 #include "UserInterface.h"
 
+
 GraphViewer* creategraphViewer(const Graph* graph){
     auto* gv = new GraphViewer(900, 900, false);
     gv->createWindow(900, 900);

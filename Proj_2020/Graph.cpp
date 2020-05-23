@@ -94,6 +94,67 @@ vector<Vertex *> Graph::getVertexSet() const{
     return vertexSet;
 }
 
+int Graph::findVertexIdx(Vertex* vertex) const{
+    for(int i = 0; i < vertexSet.size(); i++){
+        if(vertexSet[i]->ID == vertex->ID)
+            return i;
+    }
+
+    return -1;
+}
+
+void Graph::setW(int i, int j, double weight){
+    W.at(i).at(j) = weight;
+}
+
+
+double Graph::getW(int i, int j) const{
+    return W.at(i).at(j);
+}
+
+
+void Graph::setP(int i, int j, int index){
+    P.at(i).at(j) = index;
+}
+
+//returns index of vertex
+int Graph::getP(int i, int j) const{
+    return P.at(i).at(j);
+}
+
+
+void Graph::resetMatrixW(int n) {
+    W = vector<vector<double>> (n, vector<double> (n));
+}
+
+
+void Graph::resetMatrixP(int n) {
+    P = vector<vector<int>> (n, vector<int> (n));
+}
+
+
+double Graph::edgeWeight(int i, int j) const{
+    if(i == j) return 0;
+
+    for(auto edge : vertexSet.at(i)->getAdj()){
+        if(edge->dest == vertexSet.at(j))
+            return edge->getWeight();
+    }
+
+    return INF;
+}
+
+
+int Graph::nextVertex(int i, int j) const{
+    for(auto edge : vertexSet.at(i)->getAdj()){
+        if(edge->dest == vertexSet.at(j))
+            return j;
+    }
+
+    return -1;
+}
+
+
 /*****  ALGORITHMS   *****/
 
 void Graph::dijkstraShortestPath(int srcID){
@@ -135,4 +196,79 @@ vector<Vertex *> Graph::getPath(const int &origin, const int &dest) const{
 
     reverse(res.begin(), res.end());
     return res;
+}
+
+
+
+void Graph::floydWarshallShortestPath(){
+    int n = getNumVertex();
+    resetMatrixW(n);
+    resetMatrixP(n);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i; j < n; j++) {
+            setW(i, j, edgeWeight(i, j));
+            setW(j, i, edgeWeight(j, i));
+            setP(i, j, nextVertex(i, j));
+            setP(j, i, nextVertex(j, i));
+        }
+    }
+
+    for(int k = 0; k < n; k++) {
+        cout << "k do floyd: " << k << endl;
+        for (int j = 0; j < n; j++)
+            for (int i = 0; i < n; i++) {
+                if (j == k || i == k || i == j || getW(i, k) == INF || getW(k, j) == INF)
+                    continue;
+                double val = getW(i, k) + getW(k, j);
+                if (val < getW(i, j)) {
+                    setW(i, j, val);
+                    setP(i, j, getP(i, k));
+                }
+            }
+    }
+}
+
+
+vector<Vertex *> Graph::getfloydWarshallPath(const int &orig, const int &dest) const{
+    vector<Vertex *> res;
+    int v1 = findVertexIdx(findVertex(orig));
+    int v2 = findVertexIdx(findVertex(dest));
+
+    if(v1 == -1 || v2 == -1 || getW(v1,v2) == INF)
+        return res;
+
+    res.push_back(vertexSet[v1]);
+    while(v1!=v2){
+        v1 = getP(v1, v2);
+        if(v1 < 0){
+            break;
+        }
+        res.push_back(vertexSet[v1]);
+    }
+
+    //reverse(res.begin(), res.end());
+    return res;
+
+}
+
+
+double Graph::getfloydWarshallWeight(const int &orig, const int &dest) const{
+    double dist = 0;
+    int v1 = findVertexIdx(findVertex(orig));
+    int v2 = findVertexIdx(findVertex(dest));
+
+    if(v1 == -1 || v2 == -1 || getW(v1,v2) == INF)
+        return dist;
+
+    dist += getW(v1,v2);
+    while(v1!=v2){
+        v1 = getP(v1, v2);
+        if(v1 < 0){
+            break;
+        }
+        dist += getW(v1,v2);
+    }
+
+    return dist;
 }

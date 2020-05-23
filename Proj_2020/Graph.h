@@ -80,17 +80,41 @@ public:
 class Graph {
     vector<Vertex*> vertexSet;      //vertex set
 
+    //for Floyd-Warshall
+    vector<vector<double>> W;
+    vector<vector<int>> P;
+
 public:
     Vertex* findVertex(int ID) const;
     bool addVertex(int ID, double x, double y);
     bool addEdge(int edgeID, int srcID, int destID, double weight);
     int getNumVertex() const;
     vector<Vertex *> getVertexSet() const;
+    int findVertexIdx(Vertex* vertex) const;
 
-    vector<Vertex *> getPath(const int &origin, const int &dest) const;
+    //for Floyd-Warshall
+    void resetMatrixW(int size);
+    void resetMatrixP(int size);
+    void setW(int i, int j, double weight);
+    double getW(int i, int j) const;
+    void setP(int i, int j, int index);
+    int getP(int i, int j) const;
+    double edgeWeight(int i, int j) const;
+    int nextVertex(int i, int j) const;
+
+
+
 
     //algorithms
+    //void
+
+
     void dijkstraShortestPath(int srcID);
+    vector<Vertex *> getPath(const int &origin, const int &dest) const;
+
+    void floydWarshallShortestPath();
+    vector<Vertex *> getfloydWarshallPath(const int &orig, const int &dest) const;
+    double getfloydWarshallWeight(const int &orig, const int &dest) const;
 };
 
 
