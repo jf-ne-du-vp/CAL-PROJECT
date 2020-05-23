@@ -285,6 +285,7 @@ double Graph::getfloydWarshallWeight(const int &orig, const int &dest) const{
 
 void Graph::dfsVisit(Vertex* vertex){
     vertex->visited = true;
+    cout << "iwas visited: " << vertex->getID() << endl;
     for(auto it: vertex->getAdj()){
         if(!it->getDest()->visited)
             dfsVisit(it->getDest());

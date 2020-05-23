@@ -135,6 +135,12 @@
 		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/main.cpp">
 			<Option target="Proj_2020"/>
 		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.cpp">
+			<Option target="Proj_2020"/>
+		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.h">
+			<Option target="Proj_2020"/>
+		</Unit>
 		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

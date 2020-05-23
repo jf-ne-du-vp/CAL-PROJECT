@@ -45,10 +45,10 @@ int main() {
     for(int i = 0; i < v1.size(); i++){
         d += v1[i]->getDist();
     }
-    cout << "antes de dfs:" << graph->findVertex(9074)->getVisited() << endl;
+    cout << "antes de dfs:" << graph->findVertex(6519)->getVisited() << endl;
     graph->dfs(graph->findVertex(9074));
     cout << "completed dfs" << endl;
-    cout << "depois de dfs:" << graph->findVertex(591)->getVisited() << endl;
+    cout << "depois de dfs:" << graph->findVertex(6519)->getVisited() << endl;
     //floydwarshal
     /*cout << "starting floyd" << endl;
     graph->floydWarshallShortestPath();
