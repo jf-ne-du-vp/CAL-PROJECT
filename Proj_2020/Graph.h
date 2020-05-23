@@ -34,6 +34,7 @@ class Vertex{
     double dist = 0;
     Vertex *path = NULL;
     int queueIndex = 0; 		// required by MutablePriorityQueue
+    bool clientDest = false;
 
     bool visited = false;		// auxiliary field
     bool processing = false;	// auxiliary field
@@ -50,6 +51,9 @@ public:
     Vertex *getPath() const;
     void setVisited(bool visited);
     bool getVisited() const;
+    void setClientDest(bool dest);
+    bool getClientDest() const;
+
 
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
     friend class Graph;

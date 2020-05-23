@@ -44,6 +44,14 @@ bool Vertex::getVisited() const{
     return this->visited;
 }
 
+void Vertex::setClientDest(bool dest){
+    this->clientDest = dest;
+}
+
+bool Vertex::getClientDest() const{
+    return this->clientDest;
+}
+
 bool Vertex::operator<(Vertex & vertex) const{
     return this->dist < vertex.dist;
 }
