@@ -36,6 +36,14 @@ Vertex *Vertex::getPath() const{
     return this->path;
 }
 
+void Vertex::setVisited(bool visited){
+    this->visited = visited;
+}
+
+bool Vertex::getVisited() const{
+    return this->visited;
+}
+
 bool Vertex::operator<(Vertex & vertex) const{
     return this->dist < vertex.dist;
 }
@@ -93,6 +101,7 @@ int Graph::getNumVertex() const{
 vector<Vertex *> Graph::getVertexSet() const{
     return vertexSet;
 }
+
 
 int Graph::findVertexIdx(Vertex* vertex) const{
     for(int i = 0; i < vertexSet.size(); i++){
@@ -271,4 +280,22 @@ double Graph::getfloydWarshallWeight(const int &orig, const int &dest) const{
     }
 
     return dist;
+}
+
+
+void Graph::dfsVisit(Vertex* vertex){
+    vertex->visited = true;
+    for(auto it: vertex->getAdj()){
+        if(!it->getDest()->visited)
+            dfsVisit(it->getDest());
+    }
+}
+
+
+void Graph::dfs(Vertex* src){
+    for(auto it : vertexSet){
+        it->visited = false;
+    }
+
+    dfsVisit(src);
 }

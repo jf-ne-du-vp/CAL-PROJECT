@@ -48,6 +48,8 @@ public:
     double getDist() const;
     vector<Edge*> getAdj() const;
     Vertex *getPath() const;
+    void setVisited(bool visited);
+    bool getVisited() const;
 
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
     friend class Graph;
@@ -106,7 +108,9 @@ public:
 
 
     //algorithms
-    //void
+    void dfsVisit(Vertex* vertex);
+    void dfs(Vertex* src);
+
 
 
     void dijkstraShortestPath(int srcID);

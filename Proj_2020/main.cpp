@@ -45,19 +45,29 @@ int main() {
     for(int i = 0; i < v1.size(); i++){
         d += v1[i]->getDist();
     }
-
-
+    cout << "antes de dfs:" << graph->findVertex(9074)->getVisited() << endl;
+    graph->dfs(graph->findVertex(9074));
+    cout << "completed dfs" << endl;
+    cout << "depois de dfs:" << graph->findVertex(591)->getVisited() << endl;
     //floydwarshal
-    cout << "starting floyd" << endl;
+    /*cout << "starting floyd" << endl;
     graph->floydWarshallShortestPath();
     cout << "calculated floyd" << endl;
-    v1 = graph->getfloydWarshallPath(3617, 5033);
-    cout << "got floyd path" << endl;
-    showPathInGraph(gv, v1);
+    int limit = 0;
+
+    while(limit < 200) {
+        double a, b;
+        cout << "id dos coisos" << endl;
+        cin >> a >> b;
+        v1 = graph->getfloydWarshallPath(a, b);
+        cout << "got floyd path" << endl;
+        cout << "Dist total percorrida floyd: " << graph->getfloydWarshallWeight(a,b)<<endl;
+        showPathInGraph(gv, v1);
+        limit++;
+    }
+     */
 
 
-    cout << "Dist total percorrida floyd: " << graph->getfloydWarshallWeight(3617,5033)<<endl;
-    cout << "Dist total percorrida dijkstra: " << d << endl;
     getchar();
 
     gv->closeWindow();
