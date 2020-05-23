@@ -111,6 +111,12 @@
 		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.h">
 			<Option target="Proj_2020"/>
 		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Menu.cpp">
+			<Option target="Proj_2020"/>
+		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Menu.h">
+			<Option target="Proj_2020"/>
+		</Unit>
 		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/MutablePriorityQueue.h">
 			<Option target="Proj_2020"/>
 		</Unit>

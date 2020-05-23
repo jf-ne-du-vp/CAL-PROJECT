@@ -258,6 +258,33 @@ GraphViewer/graphviewer.cpp.s:
 	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/GraphViewer/graphviewer.cpp.s
 .PHONY : GraphViewer/graphviewer.cpp.s
 
+Menu.o: Menu.cpp.o
+
+.PHONY : Menu.o
+
+# target to build an object file
+Menu.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Menu.cpp.o
+.PHONY : Menu.cpp.o
+
+Menu.i: Menu.cpp.i
+
+.PHONY : Menu.i
+
+# target to preprocess a source file
+Menu.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Menu.cpp.i
+.PHONY : Menu.cpp.i
+
+Menu.s: Menu.cpp.s
+
+.PHONY : Menu.s
+
+# target to generate assembly for a file
+Menu.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Menu.cpp.s
+.PHONY : Menu.cpp.s
+
 Path.o: Path.cpp.o
 
 .PHONY : Path.o
@@ -417,6 +444,9 @@ help:
 	@echo "... GraphViewer/graphviewer.o"
 	@echo "... GraphViewer/graphviewer.i"
 	@echo "... GraphViewer/graphviewer.s"
+	@echo "... Menu.o"
+	@echo "... Menu.i"
+	@echo "... Menu.s"
 	@echo "... Path.o"
 	@echo "... Path.i"
 	@echo "... Path.s"
