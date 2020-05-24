@@ -1,8 +1,5 @@
 #include "BuildGraph.h"
 
-double euclidianDistance(Vertex* src, Vertex* dest){
-    return sqrt(pow(src->getX() - dest->getX(), 2) + pow(src->getY() - dest->getY(), 2));
-}
 
 
 Graph* buildGraph(string nodePath, string edgePath){

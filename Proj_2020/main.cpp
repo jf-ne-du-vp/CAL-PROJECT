@@ -22,6 +22,7 @@ int main() {
     
     //here to choose map, then load clients, and cars
 
+
     cout << "Loading clients" << endl;
     ct->clients.emplace_back("teresa", 564, 4414);
     ct->clients.emplace_back("luis", 56, 8964);
@@ -37,7 +38,7 @@ int main() {
     ct->cars.emplace_back(4);
     cout << "Cars loaded" << endl;
 
-
+    ct->stationID = 15859;
 
     cout << "Loading Graph" << endl;
     //Graph* graph = buildGraph("../Maps/GridGraphs/16x16/nodes.txt", "../Maps/GridGraphs/16x16/edges.txt");

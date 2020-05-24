@@ -36,7 +36,7 @@ class Vertex{
     int queueIndex = 0; 		// required by MutablePriorityQueue
     bool clientDest = false;
 
-    bool visited = false;		// auxiliary field
+    bool visited = false;		// auxiliary field for dfs
     bool processing = false;	// auxiliary field
 
     void addEdge(int ID, Vertex *dest, double w);
@@ -117,16 +117,28 @@ public:
     static bool dfsVisit(Vertex* vertex, Vertex* dest);
     bool dfs(Vertex* src, Vertex* dest);
 
+    //shortest path from one to all
     void dijkstraShortestPath(int srcID);
+    //shortest path from source to destination
+    vector<Vertex *> aStar(const int &origin, const int &dest);
+    //getPath from dijkstra and aStar
     vector<Vertex *> getPath(const int &origin, const int &dest) const;
+
 
     void floydWarshallShortestPath();
     vector<Vertex *> getfloydWarshallPath(const int &orig, const int &dest) const;
     double getfloydWarshallWeight(const int &orig, const int &dest) const;
 
+
+
     //vector<Vertex *> nearestNeighbour
 
 };
+
+
+double euclidianDistance(Vertex* src, Vertex* dest);    //should i try other methods to calculate dist between vertexes?
+
+double manhattanDistance(Vertex* src, Vertex* dest);
 
 
 #endif //PROJ_2020_GRAPH_H

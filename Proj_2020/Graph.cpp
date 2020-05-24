@@ -183,6 +183,7 @@ void Graph::dijkstraShortestPath(int srcID){
     for(auto v : vertexSet){
         v->dist = INF;
         v->path = NULL;
+        v->queueIndex = 0;
     }
 
     s->dist = 0;
@@ -216,6 +217,46 @@ vector<Vertex *> Graph::getPath(const int &origin, const int &dest) const{
 
     reverse(res.begin(), res.end());
     return res;
+}
+
+/*****  A-star   *****/
+
+vector<Vertex *> Graph::aStar(const int &origin, const int &dest){
+    auto src = findVertex(origin);
+    auto final = findVertex(dest);
+
+    for(auto v : vertexSet){
+        v->dist = INF;
+        v->path = NULL;
+        v->queueIndex = 0;
+    }
+
+    src->dist = 0;
+    MutablePriorityQueue<Vertex> q;
+    q.insert(src);
+
+    while(!q.empty()){
+        auto v = q.extractMin();
+
+        //if(v == final)
+        //    break;
+
+        for(auto e : v->adj) {
+            e->dest->queueIndex = v->getDist() - euclidianDistance(v, e->dest) + e->getWeight() + euclidianDistance(e->dest, final);
+            if (e->dest->dist > e->dest->queueIndex){
+                double oldDist = e->dest->dist;
+                e->dest->dist = e->dest->queueIndex;
+                e->dest->path = v;
+                if (oldDist == INF)
+                    q.insert(e->dest);
+                else
+                    q.decreaseKey(e->dest);
+            }
+        }
+    }
+
+
+    return getPath(origin, dest);
 }
 
 
@@ -339,3 +380,17 @@ bool Graph::dfs(Vertex* src, Vertex* dest){
 /*****  Nearest Neighbour   *****/
 
 
+
+
+
+
+/*****  Calculate distances (heuristic)   *****/
+
+
+double euclidianDistance(Vertex* src, Vertex* dest){
+    return sqrt(pow(src->getX() - dest->getX(), 2) + pow(src->getY() - dest->getY(), 2));
+}
+
+double manhattanDistance(Vertex* src, Vertex* dest){
+    return (abs(src->getX() - dest->getX()) + abs(src->getY() - dest->getY()));
+}

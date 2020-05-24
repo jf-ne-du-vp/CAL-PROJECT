@@ -9,7 +9,7 @@
 
 #include "Graph.h"
 
-double euclidianDistance(Vertex* src, Vertex* dest);    //should i try other methods to calculate dist between vertexes?
+
 
 Graph* buildGraph(string nodePath, string edgePath);
 

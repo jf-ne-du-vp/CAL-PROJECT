@@ -14,8 +14,6 @@ public:
 
     double getDistance() const;
     vector<Vertex *> getPath() const;
-
-
 };
 
 
