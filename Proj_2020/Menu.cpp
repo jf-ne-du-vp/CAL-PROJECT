@@ -1,5 +1,29 @@
 #include "Menu.h"
 
+void secondProblem(CityTransfers* ct){
+    int option;
+
+    cout << "             || ================== Main Menu =================" << endl;
+    cout << "             || (1) Nearest neighbour / using Dijkstra" << endl;
+    cout << "             || (2) Nearest neighbour / using Manhattan distance" << endl;
+    cout << "             || (3) Return to main menu" << endl;
+
+    option = menuOption(1,3);
+
+    switch(option){
+        case 1:
+            cout << "To be implemented" << endl;
+            secondProblem(ct);
+            break;
+        case 2:
+            cout << "To be implemented" << endl;
+            secondProblem(ct);
+            break;
+        case 3:
+            return;
+    }
+}
+
 void firstProblem(CityTransfers* ct){
     int option;
     int dest;
@@ -176,21 +200,33 @@ void mapMenu(CityTransfers* ct){
             ct->graph = buildGraph("../Maps/MapaPorto/porto_strong_nodes_xy.txt", "../Maps/MapaPorto/porto_strong_edges.txt");
             cout << "Graph loaded" << endl << endl;
             //now get clients and stationID
+            //ct->stationID = getStation("../Maps/MapaPorto/clients.txt")
+            //ct->clients = getClients("../Maps/MapaPorto/clients.txt");
+            //ct->cars = getCars("../Maps/MapaPorto/cars.txt")
             break;
         case 2:
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaEspinho/espinho_strong_nodes_xy.txt", "../Maps/MapaEspinho/espinho_strong_edges.txt");
             cout << "Graph loaded" << endl << endl;
+            //ct->stationID = getStation("../Maps/MapaEspinho/clients.txt")
+            //ct->clients = getClients("../Maps/MapaEspinho/clients.txt");
+            //ct->cars = getCars("../Maps/MapaEspinho/cars.txt")
             break;
         case 3:
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPenafiel/penafiel_strong_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_strong_edges.txt");
             cout << "Graph loaded" << endl << endl;
+            //ct->stationID = getStation("../Maps/MapaPenafiel/clients.txt")
+            //ct->clients = getClients("../Maps/MapaPenafiel/clients.txt");
+            //ct->cars = getCars("../Maps/MapaPenafiel/cars.txt")
             break;
         case 4:
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPorto/porto_full_nodes_xy.txt", "../Maps/MapaPorto/porto_full_edges.txt");
             cout << "Graph loaded" << endl << endl;
+            //ct->stationID = getStation("../Maps/MapaPorto/clients.txt")
+            //ct->clients = getClients("../Maps/MapaPorto/clients.txt");
+            //ct->cars = getCars("../Maps/MapaPorto/cars.txt")
             break;
     }
 }

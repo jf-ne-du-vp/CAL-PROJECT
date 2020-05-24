@@ -87,3 +87,58 @@ Graph* buildGraph(string nodePath, string edgePath){
 
     return graph;
 }
+
+
+vector<Person> getClients(string clientsPath){
+    vector<Person> res;
+    ifstream stationID;
+    stationID.open(clientsPath);
+
+    if (stationID.fail()) {
+        cout << "Couldn't open node file: " << clientsPath  << endl;
+        return res;
+    }
+
+
+
+    stationID.close();
+    return res;
+}
+
+vector<Car> getCars(string carsPath){
+    vector<Car> res;
+    ifstream cars;
+    cars.open(carsPath);
+    string line;
+
+    if (cars.fail()) {
+        cout << "Couldn't open node file: " << carsPath  << endl;
+        return res;
+    }
+
+    while(getline(cars, line) != EOF){
+
+    }
+
+    cars.close();
+    return  res;
+}
+
+
+int getStation(string clientsPath){
+    ifstream stationID;
+    stationID.open(clientsPath);
+
+    if (stationID.fail()) {
+        cout << "Couldn't open node file: " << clientsPath  << endl;
+        return 0;
+    }
+
+    int id;
+    string info;
+    getline(stationID, info);
+    id = stoi(info);
+
+    stationID.close();
+    return id;
+}

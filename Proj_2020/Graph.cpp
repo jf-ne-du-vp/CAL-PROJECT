@@ -233,6 +233,7 @@ vector<Vertex *> Graph::aStar(const int &origin, const int &dest){
         v->dist = INF;
         v->path = NULL;
         v->queueIndex = 0;
+        v->distASTAR = 0;
     }
 
     src->dist = 0;
@@ -246,7 +247,7 @@ vector<Vertex *> Graph::aStar(const int &origin, const int &dest){
             break;
 
         for(auto e : v->adj) {
-            double aS = v->getDist() - manhattanDistance(v, e->dest) + e->getWeight() + manhattanDistance(e->dest, final);
+            double aS = v->getDist() - euclidianDistance(v, e->dest) + e->getWeight() + euclidianDistance(e->dest, final);
             if (e->dest->dist > aS){
                 double oldDist = e->dest->dist;
                 e->dest->dist = aS;
