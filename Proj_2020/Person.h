@@ -7,16 +7,16 @@ using namespace std;
 class Person {
     string name;
     double nif;
-    double destiny;  //id of destiny vertex
+    int destiny;  //id of destiny vertex
 public:
     Person();
-    Person(string name, double nif, double destiny);
+    Person(string name, double nif, int destiny);
     string getName() const;
     void setName(string name);
     double getNIF() const;
     void setNIF(double nif);
-    double getDestiny() const;
-    void setDestiny(double destiny);
+    int getDestiny() const;
+    void setDestiny(int destiny);
 
     /*
      * probably want to add time of arrival to station (need to figure out how to store hour)

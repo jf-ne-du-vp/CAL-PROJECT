@@ -174,6 +174,9 @@ int Graph::nextVertex(int i, int j) const{
 
 /*****  ALGORITHMS   *****/
 
+
+/*****  Dijkstra   *****/
+
 void Graph::dijkstraShortestPath(int srcID){
     auto s = findVertex(srcID);
 
@@ -215,6 +218,8 @@ vector<Vertex *> Graph::getPath(const int &origin, const int &dest) const{
     return res;
 }
 
+
+/*****  Floyd-Warshall   *****/
 
 
 void Graph::floydWarshallShortestPath(){
@@ -291,15 +296,15 @@ double Graph::getfloydWarshallWeight(const int &orig, const int &dest) const{
 }
 
 
+/*****  DFS   *****/
+
 void Graph::dfsVisit(Vertex* vertex){
     vertex->visited = true;
-    cout << "iwas visited: " << vertex->getID() << endl;
     for(auto it: vertex->getAdj()){
         if(!it->getDest()->visited)
             dfsVisit(it->getDest());
     }
 }
-
 
 void Graph::dfs(Vertex* src){
     for(auto it : vertexSet){
@@ -308,3 +313,29 @@ void Graph::dfs(Vertex* src){
 
     dfsVisit(src);
 }
+
+
+bool Graph::dfsVisit(Vertex* vertex, Vertex* dest){
+    vertex->visited = true;
+    if(vertex == dest){
+        return true;
+    }
+    for(auto it: vertex->getAdj()){
+        if(!it->getDest()->visited)
+            dfsVisit(it->getDest());
+    }
+    return false;
+}
+
+bool Graph::dfs(Vertex* src, Vertex* dest){
+    for(auto it : vertexSet){
+        it->visited = false;
+    }
+
+    return dfsVisit(src, dest);
+}
+
+
+/*****  Nearest Neighbour   *****/
+
+

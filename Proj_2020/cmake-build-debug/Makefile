@@ -177,6 +177,33 @@ Car.cpp.s:
 	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/Car.cpp.s
 .PHONY : Car.cpp.s
 
+CityTransfers.o: CityTransfers.cpp.o
+
+.PHONY : CityTransfers.o
+
+# target to build an object file
+CityTransfers.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/CityTransfers.cpp.o
+.PHONY : CityTransfers.cpp.o
+
+CityTransfers.i: CityTransfers.cpp.i
+
+.PHONY : CityTransfers.i
+
+# target to preprocess a source file
+CityTransfers.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/CityTransfers.cpp.i
+.PHONY : CityTransfers.cpp.i
+
+CityTransfers.s: CityTransfers.cpp.s
+
+.PHONY : CityTransfers.s
+
+# target to generate assembly for a file
+CityTransfers.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/CityTransfers.cpp.s
+.PHONY : CityTransfers.cpp.s
+
 Graph.o: Graph.cpp.o
 
 .PHONY : Graph.o
@@ -435,6 +462,9 @@ help:
 	@echo "... Car.o"
 	@echo "... Car.i"
 	@echo "... Car.s"
+	@echo "... CityTransfers.o"
+	@echo "... CityTransfers.i"
+	@echo "... CityTransfers.s"
 	@echo "... Graph.o"
 	@echo "... Graph.i"
 	@echo "... Graph.s"

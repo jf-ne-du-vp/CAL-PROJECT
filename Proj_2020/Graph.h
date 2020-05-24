@@ -112,10 +112,10 @@ public:
 
 
     //algorithms
-    void dfsVisit(Vertex* vertex);
+    static void dfsVisit(Vertex* vertex);
     void dfs(Vertex* src);
-
-
+    static bool dfsVisit(Vertex* vertex, Vertex* dest);
+    bool dfs(Vertex* src, Vertex* dest);
 
     void dijkstraShortestPath(int srcID);
     vector<Vertex *> getPath(const int &origin, const int &dest) const;
@@ -123,6 +123,9 @@ public:
     void floydWarshallShortestPath();
     vector<Vertex *> getfloydWarshallPath(const int &orig, const int &dest) const;
     double getfloydWarshallWeight(const int &orig, const int &dest) const;
+
+    //vector<Vertex *> nearestNeighbour
+
 };
 
 

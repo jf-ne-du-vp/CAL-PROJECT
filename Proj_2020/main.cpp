@@ -7,6 +7,8 @@
 #include "BuildGraph.h"
 #include "GraphViewer/graphviewer.h"
 #include "UserInterface.h"
+#include "Menu.h"
+#include "CityTransfers.h"
 
 
 using namespace std;
@@ -16,16 +18,20 @@ int main() {
     cout << "   ------   WELCOME TO PORTO CITY TRANSFERS   ------" << endl;
     cout << endl << "             Fast and safe transportation" << endl << endl << endl;
 
+    CityTransfers* ct = new CityTransfers();
+
     //maybe main menu
     //Graph* graph = buildGraph("../Maps/GridGraphs/16x16/nodes.txt", "../Maps/GridGraphs/16x16/edges.txt");
     //Graph* graph = buildGraph("../Maps/PortugalMaps/Lisboa/nodes_x_y_lisboa.txt", "../Maps/PortugalMaps/Lisboa/edges_lisboa.txt");
     //Graph* graph = buildGraph("../Maps/MapaPorto/porto_strong_nodes_xy.txt", "../Maps/MapaPorto/porto_strong_edges.txt");
     //Graph* graph = buildGraph("../Maps/MapaEspinho/espinho_strong_nodes_xy.txt", "../Maps/MapaEspinho/espinho_strong_edges.txt");
-    Graph* graph = buildGraph("../Maps/MapaPenafiel/penafiel_strong_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_strong_edges.txt");
+    ct->graph = buildGraph("../Maps/MapaPenafiel/penafiel_strong_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_strong_edges.txt");
 
-    cout << "Grafo lido tem " << graph->getNumVertex() << " vertices." << endl;
+    cout << "Grafo lido tem " << ct->graph->getNumVertex() << " vertices." << endl;
 
-    GraphViewer* gv = creategraphViewer(graph);
+     ct->gv = creategraphViewer(ct->graph);
+
+    mainMenu(ct);
 
     //for grid
     //graph->dijkstraShortestPath(34);
@@ -38,17 +44,17 @@ int main() {
     //graph->dijkstraShortestPath(14267);
     //vector<Vertex *> v1 = graph->getPath(14267, 17617);
     //graph->dijkstraShortestPath(3617);
-    vector<Vertex *> v1; // = graph->getPath(3617, 5033);
+    //vector<Vertex *> v1 = graph->getPath(3617, 5033);
     //cout << "Vertices visitados: " << v1.size() << endl;
     //showPathInGraph(gv, v1);
-    double d = 0;
-    for(int i = 0; i < v1.size(); i++){
-        d += v1[i]->getDist();
-    }
-    cout << "antes de dfs:" << graph->findVertex(6519)->getVisited() << endl;
-    graph->dfs(graph->findVertex(9074));
-    cout << "completed dfs" << endl;
-    cout << "depois de dfs:" << graph->findVertex(6519)->getVisited() << endl;
+    //double d = 0;
+    //for(int i = 0; i < v1.size(); i++){
+    //    d += v1[i]->getDist();
+    //}
+    //cout << "antes de dfs:" << ct->graph->findVertex(6519)->getVisited() << endl;
+    //ct->graph->dfs(ct->graph->findVertex(9074));
+    //cout << "completed dfs" << endl;
+    //cout << "depois de dfs:" << ct->graph->findVertex(6519)->getVisited() << endl;
     //floydwarshal
     /*cout << "starting floyd" << endl;
     graph->floydWarshallShortestPath();
@@ -70,7 +76,7 @@ int main() {
 
     getchar();
 
-    gv->closeWindow();
-    free(gv);
+    ct->gv->closeWindow();
+    free(ct->gv);
     return 0;
 }

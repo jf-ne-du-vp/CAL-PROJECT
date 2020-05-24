@@ -2,7 +2,7 @@
 
 Person::Person(){}
 
-Person::Person(string name, double NIF, double destiny): name(name), nif(nif), destiny(destiny){}
+Person::Person(string name, double NIF, int destiny): name(name), nif(nif), destiny(destiny){}
 
 
 string Person::getName() const{
@@ -20,9 +20,9 @@ void Person::setNIF(double nif){
     this->nif = nif;
 }
 
-double Person::getDestiny() const{
+int Person::getDestiny() const{
     return destiny;
 }
-void Person::setDestiny(double destiny){
+void Person::setDestiny(int destiny){
     this->destiny = destiny;
 }

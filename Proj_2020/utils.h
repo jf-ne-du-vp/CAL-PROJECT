@@ -7,5 +7,8 @@
 
 vector<Vertex *> appendPaths(vector<Vertex *> path1, vector<Vertex *> path2);
 
+int menuOption(int minimum, int max);
+
+int showClients();
 
 #endif //PROJ_2020_UTILS_H

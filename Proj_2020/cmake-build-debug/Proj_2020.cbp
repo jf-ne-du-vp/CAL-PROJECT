@@ -90,6 +90,12 @@
 		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Car.h">
 			<Option target="Proj_2020"/>
 		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.cpp">
+			<Option target="Proj_2020"/>
+		</Unit>
+		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.h">
+			<Option target="Proj_2020"/>
+		</Unit>
 		<Unit filename="/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.cpp">
 			<Option target="Proj_2020"/>
 		</Unit>
