@@ -46,5 +46,9 @@ void showPathInGraph(GraphViewer* gv, const vector<Vertex*>& path){
 void resetGraph(GraphViewer* gv, const Graph* graph){
     for(auto v : graph->getVertexSet()){
         gv->setVertexColor(v->getID(), YELLOW);
+        for (Edge* e : v->getAdj()) {
+                gv->setEdgeColor(e->getID(), BLACK);
+
+        }
     }
 }

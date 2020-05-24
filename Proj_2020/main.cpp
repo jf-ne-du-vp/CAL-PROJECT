@@ -22,6 +22,16 @@ int main() {
     
     //here to choose map, then load clients, and cars
 
+    mapMenu(ct);
+
+    //cout << "Loading Graph" << endl;
+    //Graph* graph = buildGraph("../Maps/GridGraphs/16x16/nodes.txt", "../Maps/GridGraphs/16x16/edges.txt");
+    //Graph* graph = buildGraph("../Maps/PortugalMaps/Lisboa/nodes_x_y_lisboa.txt", "../Maps/PortugalMaps/Lisboa/edges_lisboa.txt");
+    //cout << "Graph loaded" << endl << endl << endl << endl;
+
+    ct->gv = creategraphViewer(ct->graph);
+
+    ct->stationID = 15859;
 
     cout << "Loading clients" << endl;
     ct->clients.emplace_back("teresa", 564, 4414);
@@ -39,16 +49,6 @@ int main() {
     cout << "Cars loaded" << endl;
 
     ct->stationID = 15859;
-
-    cout << "Loading Graph" << endl;
-    //Graph* graph = buildGraph("../Maps/GridGraphs/16x16/nodes.txt", "../Maps/GridGraphs/16x16/edges.txt");
-    //Graph* graph = buildGraph("../Maps/PortugalMaps/Lisboa/nodes_x_y_lisboa.txt", "../Maps/PortugalMaps/Lisboa/edges_lisboa.txt");
-    //Graph* graph = buildGraph("../Maps/MapaPorto/porto_strong_nodes_xy.txt", "../Maps/MapaPorto/porto_strong_edges.txt");
-    ct->graph = buildGraph("../Maps/MapaEspinho/espinho_strong_nodes_xy.txt", "../Maps/MapaEspinho/espinho_strong_edges.txt");
-    //ct->graph = buildGraph("../Maps/MapaPenafiel/penafiel_strong_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_strong_edges.txt");
-    cout << "Graph loaded" << endl << endl << endl << endl;
-
-    ct->gv = creategraphViewer(ct->graph);
 
     //fazer dfs para processar
     //cout << "Pre-procesing starting" << endl;

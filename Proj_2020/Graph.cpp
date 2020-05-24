@@ -192,9 +192,10 @@ void Graph::dijkstraShortestPath(int srcID){
     while(!q.empty()){
         auto v = q.extractMin();
         for(auto e : v->adj) {
-            if (e->dest->dist > v->dist + e->weight){
+            double dJ = v->dist + e->weight;
+            if (e->dest->dist > dJ){
                 double oldDist = e->dest->dist;
-                e->dest->dist = v->dist + e->weight;
+                e->dest->dist = dJ;
                 e->dest->path = v;
                 if (oldDist == INF)
                     q.insert(e->dest);
@@ -238,14 +239,14 @@ vector<Vertex *> Graph::aStar(const int &origin, const int &dest){
     while(!q.empty()){
         auto v = q.extractMin();
 
-        //if(v == final)
-        //    break;
+        if(v == final)
+            break;
 
         for(auto e : v->adj) {
-            e->dest->queueIndex = v->getDist() - euclidianDistance(v, e->dest) + e->getWeight() + euclidianDistance(e->dest, final);
-            if (e->dest->dist > e->dest->queueIndex){
+            double aS = v->getDist() - manhattanDistance(v, e->dest) + e->getWeight() + manhattanDistance(e->dest, final);
+            if (e->dest->dist > aS){
                 double oldDist = e->dest->dist;
-                e->dest->dist = e->dest->queueIndex;
+                e->dest->dist = aS;
                 e->dest->path = v;
                 if (oldDist == INF)
                     q.insert(e->dest);

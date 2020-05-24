@@ -22,14 +22,10 @@ void firstProblem(CityTransfers* ct){
             showClients(ct);
             clientID = menuOption(0, ct->clients.size());
             showPathInGraph(ct->gv, ct->graph->getPath(ct->stationID, ct->clients[clientID].getDestiny()));
-            for(auto & i : p){
-                distance += i->getDist();
-            }
+            distance += ct->graph->findVertex(ct->clients[clientID].getDestiny())->getDist();
             ct->graph->dijkstraShortestPath(ct->clients[clientID].getDestiny()); //it will be ct.stationID
             showPathInGraph(ct->gv, ct->graph->getPath(ct->clients[clientID].getDestiny(), ct->stationID));
-            for(auto & i : p){
-                distance += i->getDist();
-            }
+            distance += ct->graph->findVertex(ct->stationID)->getDist();
             cout << "Total distance traveled is: " << distance << endl;
             distance = 0;
             firstProblem(ct);
@@ -41,14 +37,10 @@ void firstProblem(CityTransfers* ct){
             clientID = menuOption(0, ct->clients.size());
             p = ct->graph->aStar(ct->stationID, ct->clients[clientID].getDestiny());
             showPathInGraph(ct->gv, p);
-            for(auto & i : p){
-                distance += i->getDist();
-            }
+            distance += ct->graph->findVertex(ct->clients[clientID].getDestiny())->getDist();
             p = ct->graph->aStar(ct->clients[clientID].getDestiny(), ct->stationID);
             showPathInGraph(ct->gv, p);
-            for(auto & i : p){
-                distance += i->getDist();
-            }
+            distance += ct->graph->findVertex(ct->stationID)->getDist();
             cout << "Total distance traveled is: " << distance << endl;
             distance = 0;
             firstProblem(ct);
@@ -161,5 +153,44 @@ void mainMenu(CityTransfers* ct){
             break;
         case 6:
             return;
+    }
+}
+
+void mapMenu(CityTransfers* ct){
+    int option;
+
+    cout << "             || ================== Map Menu =================" << endl;
+    cout << "             ||     Wich map to choose?"<< endl;
+    cout << "             || (1) Porto map / Strong" << endl;
+    cout << "             || (2) Espinho map / Strong" << endl;
+    cout << "             || (3) Penafiel map / Strong" << endl;
+    cout << "             || (4) Porto map / Full (to test connectivity)" << endl;
+
+
+
+    option = menuOption(1,4);
+
+    switch(option){
+        case 1:
+            cout << "Loading Graph" << endl;
+            ct->graph = buildGraph("../Maps/MapaPorto/porto_strong_nodes_xy.txt", "../Maps/MapaPorto/porto_strong_edges.txt");
+            cout << "Graph loaded" << endl << endl << endl;
+            //now get clients and stationID
+            break;
+        case 2:
+            cout << "Loading Graph" << endl;
+            ct->graph = buildGraph("../Maps/MapaEspinho/espinho_strong_nodes_xy.txt", "../Maps/MapaEspinho/espinho_strong_edges.txt");
+            cout << "Graph loaded" << endl << endl << endl;
+            break;
+        case 3:
+            cout << "Loading Graph" << endl;
+            ct->graph = buildGraph("../Maps/MapaPenafiel/penafiel_strong_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_strong_edges.txt");
+            cout << "Graph loaded" << endl << endl << endl;
+            break;
+        case 4:
+            cout << "Loading Graph" << endl;
+            ct->graph = buildGraph("../Maps/MapaPorto/porto_full_nodes_xy.txt", "../Maps/MapaPorto/porto_full_edges.txt");
+            cout << "Graph loaded" << endl << endl << endl;
+            break;
     }
 }

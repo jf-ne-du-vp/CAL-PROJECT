@@ -23,5 +23,7 @@ void clientMenu(CityTransfers* ct);
 
 void mainMenu(CityTransfers* ct);
 
+void mapMenu(CityTransfers* ct);
+
 
 #endif //PROJ_2020_MENU_H
