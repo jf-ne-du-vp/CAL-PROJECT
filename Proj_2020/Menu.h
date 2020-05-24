@@ -12,11 +12,13 @@ using namespace std;
 
 void firstProblem(CityTransfers* ct);
 
+void secondProblem(CityTransfers* ct);
+
+void thirdProblem(CityTransfers* ct);
 
 void carMenu(CityTransfers* ct);
 
 void clientMenu(CityTransfers* ct);
-
 
 void mainMenu(CityTransfers* ct);
 

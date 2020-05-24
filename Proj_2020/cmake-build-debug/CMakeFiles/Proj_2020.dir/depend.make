@@ -77,8 +77,16 @@ CMakeFiles/Proj_2020.dir/main.cpp.o: ../UserInterface.h
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../utils.h
 
+CMakeFiles/Proj_2020.dir/utils.cpp.o: ../BuildGraph.h
+CMakeFiles/Proj_2020.dir/utils.cpp.o: ../Car.h
+CMakeFiles/Proj_2020.dir/utils.cpp.o: ../CityTransfers.h
 CMakeFiles/Proj_2020.dir/utils.cpp.o: ../Graph.h
+CMakeFiles/Proj_2020.dir/utils.cpp.o: ../GraphViewer/connection.h
+CMakeFiles/Proj_2020.dir/utils.cpp.o: ../GraphViewer/edgetype.h
+CMakeFiles/Proj_2020.dir/utils.cpp.o: ../GraphViewer/graphviewer.h
 CMakeFiles/Proj_2020.dir/utils.cpp.o: ../MutablePriorityQueue.h
+CMakeFiles/Proj_2020.dir/utils.cpp.o: ../Person.h
+CMakeFiles/Proj_2020.dir/utils.cpp.o: ../UserInterface.h
 CMakeFiles/Proj_2020.dir/utils.cpp.o: ../utils.cpp
 CMakeFiles/Proj_2020.dir/utils.cpp.o: ../utils.h
 

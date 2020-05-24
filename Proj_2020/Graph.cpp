@@ -215,6 +215,7 @@ vector<Vertex *> Graph::getPath(const int &origin, const int &dest) const{
         res.push_back(v);
 
     reverse(res.begin(), res.end());
+    cout <<"got path" << endl;
     return res;
 }
 

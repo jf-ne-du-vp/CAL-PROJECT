@@ -7,7 +7,7 @@ class Car {
 
 public:
     Car();
-    Car(int seats);
+    explicit Car(int seats);
     int getSeats() const;
     void setSeats(int seats);
 };

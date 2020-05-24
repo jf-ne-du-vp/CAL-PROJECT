@@ -18,7 +18,12 @@ int main() {
     cout << "   ------   WELCOME TO PORTO CITY TRANSFERS   ------" << endl;
     cout << endl << "             Fast and safe transportation" << endl << endl << endl;
 
-    CityTransfers* ct = new CityTransfers();
+    auto* ct = new CityTransfers();
+
+    ct->clients.emplace_back("teresa", 564, 4647);
+    ct->clients.emplace_back("luis", 56, 9217);
+    ct->clients.emplace_back("joao", 54, 8513);
+    ct->clients.emplace_back("lorenco", 64, 8528);
 
     //maybe main menu
     //Graph* graph = buildGraph("../Maps/GridGraphs/16x16/nodes.txt", "../Maps/GridGraphs/16x16/edges.txt");
@@ -73,8 +78,6 @@ int main() {
     }
      */
 
-
-    getchar();
 
     ct->gv->closeWindow();
     free(ct->gv);

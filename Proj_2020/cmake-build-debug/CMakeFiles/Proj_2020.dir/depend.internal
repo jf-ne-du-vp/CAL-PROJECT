@@ -78,7 +78,15 @@ CMakeFiles/Proj_2020.dir/main.cpp.o
  /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/main.cpp
  /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.h
 CMakeFiles/Proj_2020.dir/utils.cpp.o
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/BuildGraph.h
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Car.h
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.h
  /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/connection.h
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/edgetype.h
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/graphviewer.h
  /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/MutablePriorityQueue.h
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Person.h
+ /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/UserInterface.h
  /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.cpp
  /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.h

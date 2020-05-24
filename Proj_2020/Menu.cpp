@@ -2,16 +2,25 @@
 
 void firstProblem(CityTransfers* ct){
     int option;
+    int dest;
+    int clientID;
+    double distance;
 
     cout << "             || ================== First Problem =================" << endl;
-    cout << "             || (1) Calculate and show route for one client" << endl;
+    cout << "             || (1) Dijkstra / Calculate and show route for one client " << endl;
     cout << "             || (2) Return to main menu" << endl;
 
     option = menuOption(1,2);
 
     switch(option){
         case 1:
-            cout << "in first problem" << endl;
+            ct->graph->dijkstraShortestPath(5813); //it will be ct.stationID
+            cout << "Choose client" << endl;
+            showClients(ct);
+            clientID = menuOption(0, ct->clients.size());
+            showPathInGraph(ct->gv, ct->graph->getPath(5813, ct->clients[clientID].getDestiny()));
+            ct->graph->dijkstraShortestPath(ct->clients[clientID].getDestiny()); //it will be ct.stationID
+            showPathInGraph(ct->gv, ct->graph->getPath(ct->clients[clientID].getDestiny(), 5813));
             firstProblem(ct);
             break;
         case 2:
@@ -22,6 +31,7 @@ void firstProblem(CityTransfers* ct){
 
 void carMenu(CityTransfers* ct){
     int option;
+    int id;
 
     cout << "             || ================== Client Menu =================" << endl;
     cout << "             || (1) Add Car" << endl;
@@ -32,11 +42,18 @@ void carMenu(CityTransfers* ct){
 
     switch(option){
         case 1:
-            //addCar(ct);
+            ct->cars.push_back(newCar(ct));
             carMenu(ct);
             break;
         case 2:
-            //removeCar(ct);
+            if(!ct->cars.empty()) {
+                showClients(ct);
+                cout << "Car to remove: " << endl;
+                id = menuOption(0, ct->cars.size());
+                ct->cars.erase(ct->cars.begin() + id);
+                cout << "Car eliminated" << endl << endl;
+            } else
+                cout << "No car to eliminate." << endl;
             carMenu(ct);
             break;
         case 3:
@@ -46,6 +63,7 @@ void carMenu(CityTransfers* ct){
 
 void clientMenu(CityTransfers* ct){
     int option;
+    int id;
 
     cout << "             || ================== Client Menu =================" << endl;
     cout << "             || (1) Add Client" << endl;
@@ -56,11 +74,18 @@ void clientMenu(CityTransfers* ct){
 
     switch(option){
         case 1:
-            //addClient
+            ct->clients.push_back(newClient(ct));
             clientMenu(ct);
             break;
         case 2:
-            //removeClient();
+            if(!ct->clients.empty()) {
+                showClients(ct);
+                cout << "Client to remove: " << endl;
+                id = menuOption(0, ct->clients.size());
+                ct->clients.erase(ct->clients.begin() + id);
+                cout << "Client eliminated" << endl << endl;
+            } else
+                cout << "No client to eliminate." << endl;
             clientMenu(ct);
             break;
         case 3:
