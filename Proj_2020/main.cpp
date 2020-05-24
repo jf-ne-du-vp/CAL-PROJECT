@@ -22,10 +22,10 @@ int main() {
     //here to choose map, then load clients, and cars
 
     cout << "Loading clients" << endl;
-    ct->clients.emplace_back("teresa", 564, 4647);
-    ct->clients.emplace_back("luis", 56, 9217);
-    ct->clients.emplace_back("joao", 54, 8513);
-    ct->clients.emplace_back("lorenco", 64, 8528);
+    ct->clients.emplace_back("teresa", 564, 4414);
+    ct->clients.emplace_back("luis", 56, 8964);
+    ct->clients.emplace_back("joao", 54, 489);
+    ct->clients.emplace_back("lorenco", 64, 5328);
     cout << "Clients loaded" << endl;
 
 
@@ -42,12 +42,11 @@ int main() {
     //Graph* graph = buildGraph("../Maps/GridGraphs/16x16/nodes.txt", "../Maps/GridGraphs/16x16/edges.txt");
     //Graph* graph = buildGraph("../Maps/PortugalMaps/Lisboa/nodes_x_y_lisboa.txt", "../Maps/PortugalMaps/Lisboa/edges_lisboa.txt");
     //Graph* graph = buildGraph("../Maps/MapaPorto/porto_strong_nodes_xy.txt", "../Maps/MapaPorto/porto_strong_edges.txt");
-    //Graph* graph = buildGraph("../Maps/MapaEspinho/espinho_strong_nodes_xy.txt", "../Maps/MapaEspinho/espinho_strong_edges.txt");
-    ct->graph = buildGraph("../Maps/MapaPenafiel/penafiel_strong_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_strong_edges.txt");
+    ct->graph = buildGraph("../Maps/MapaEspinho/espinho_strong_nodes_xy.txt", "../Maps/MapaEspinho/espinho_strong_edges.txt");
+    //ct->graph = buildGraph("../Maps/MapaPenafiel/penafiel_strong_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_strong_edges.txt");
     cout << "Graph loaded" << endl << endl << endl << endl;
 
     ct->gv = creategraphViewer(ct->graph);
-
 
     mainMenu(ct);
 

@@ -2,8 +2,8 @@
 
 
 GraphViewer* creategraphViewer(const Graph* graph){
-    auto* gv = new GraphViewer(900, 900, false);
-    gv->createWindow(900, 900);
+    auto* gv = new GraphViewer(1500, 1000, false);
+    gv->createWindow(1500, 1000);
     gv->defineVertexColor("Yellow");
     gv->defineEdgeColor("BLACK");
     gv->defineEdgeCurved(false);

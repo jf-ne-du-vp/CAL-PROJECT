@@ -15,13 +15,13 @@ void firstProblem(CityTransfers* ct){
     switch(option){
         case 1:
             resetGraph(ct->gv, ct->graph);
-            ct->graph->dijkstraShortestPath(5813); //it will be ct.stationID
+            ct->graph->dijkstraShortestPath(15859); //it will be ct.stationID
             cout << "Choose client" << endl;
             showClients(ct);
             clientID = menuOption(0, ct->clients.size());
-            showPathInGraph(ct->gv, ct->graph->getPath(5813, ct->clients[clientID].getDestiny()));
+            showPathInGraph(ct->gv, ct->graph->getPath(15859, ct->clients[clientID].getDestiny()));
             ct->graph->dijkstraShortestPath(ct->clients[clientID].getDestiny()); //it will be ct.stationID
-            showPathInGraph(ct->gv, ct->graph->getPath(ct->clients[clientID].getDestiny(), 5813));
+            showPathInGraph(ct->gv, ct->graph->getPath(ct->clients[clientID].getDestiny(), 15859));
             firstProblem(ct);
             break;
         case 2:
