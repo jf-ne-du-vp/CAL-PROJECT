@@ -48,6 +48,11 @@ int main() {
 
     ct->gv = creategraphViewer(ct->graph);
 
+    //fazer dfs para processar
+    //cout << "Pre-procesing starting" << endl;
+    //fazer pre tratamento dos nao acessivieis e polos a preto
+    //cout << "Pre-procesing finished, not acessible nodes represnetd in black" << endl;
+
     mainMenu(ct);
 
     //for grid
