@@ -2,8 +2,8 @@
 
 
 GraphViewer* creategraphViewer(const Graph* graph){
-    auto* gv = new GraphViewer(1500, 1000, false);
-    gv->createWindow(1500, 1000);
+    auto* gv = new GraphViewer(1200, 1000, false);
+    gv->createWindow(1200, 1000);
     gv->defineVertexColor("Yellow");
     gv->defineEdgeColor("BLACK");
     gv->defineEdgeCurved(false);
@@ -36,7 +36,7 @@ void showPathInGraph(GraphViewer* gv, const vector<Vertex*>& path){
     }
     if (path.size() == 0)
         return;
-    gv->setVertexColor(path[0]->getID(), PINK);
+    gv->setVertexColor(path[0]->getID(), BLACK);
     if (path.size() == 1)
         return;
     gv->setVertexColor(path[path.size() - 1]->getID(), GREEN);

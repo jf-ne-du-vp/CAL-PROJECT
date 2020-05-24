@@ -46,7 +46,7 @@ Graph* buildGraph(string nodePath, string edgePath){
          */
         getline(iss, midS, '(');
         getline(iss, midS, ',');
-        ID = stod(midS);
+        ID = stoi(midS);
         getline(iss, midS, ',');
         x = stod(midS);
         getline(iss, midS, ')');

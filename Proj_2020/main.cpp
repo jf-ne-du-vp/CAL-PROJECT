@@ -19,6 +19,7 @@ int main() {
     cout << endl << "             Fast and safe transportation" << endl << endl << endl;
 
     auto* ct = new CityTransfers();
+    
     //here to choose map, then load clients, and cars
 
     cout << "Loading clients" << endl;
