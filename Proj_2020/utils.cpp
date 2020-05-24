@@ -44,6 +44,7 @@ int showClients(CityTransfers* ct){
         cout << "Name : " << client.getName() << " NIF: " << client.getNIF() << " Destination: " << client.getDestiny() << endl;
         i++;
     }
+    return 0;
 }
 
 
@@ -72,6 +73,8 @@ int showCars(CityTransfers* ct){
         cout << "Number of seats: " << car.getSeats() << endl;
         i++;
     }
+
+    return 0;
 }
 
 

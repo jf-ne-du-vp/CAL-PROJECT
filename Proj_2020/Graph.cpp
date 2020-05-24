@@ -27,6 +27,9 @@ double Vertex::getDist() const{
      return this->dist;
 }
 
+double Vertex::getDistASTAR() const{
+    return this->distASTAR;
+}
 
 vector<Edge*> Vertex::getAdj() const{
     return this->adj;
@@ -247,6 +250,7 @@ vector<Vertex *> Graph::aStar(const int &origin, const int &dest){
             if (e->dest->dist > aS){
                 double oldDist = e->dest->dist;
                 e->dest->dist = aS;
+                e->dest->distASTAR =  v->distASTAR+ e->getWeight() ;
                 e->dest->path = v;
                 if (oldDist == INF)
                     q.insert(e->dest);
@@ -258,6 +262,28 @@ vector<Vertex *> Graph::aStar(const int &origin, const int &dest){
 
 
     return getPath(origin, dest);
+}
+
+double Graph::getDistanceAStar(const int &origin, const int &dest){
+    double res = 0;
+    auto v = findVertex(dest);
+    if (v == nullptr || v->dist == INF) // missing or disconnected
+        return res;
+
+    for ( ; v != nullptr; v = v->path) {
+        for(auto e : v->path->getAdj()){
+            if(e->dest == v){
+                cout <<"before adding" << endl;
+                res += e->weight;
+                cout << "been here res = " << res <<  endl;
+                break;
+            }
+        }
+        cout << "changing outer loop" << endl;
+    }
+
+    cout << "exiting weight add" << endl;
+    return res;
 }
 
 

@@ -32,6 +32,7 @@ class Vertex{
 
 
     double dist = 0;
+    double distASTAR = 0;
     Vertex *path = NULL;
     int queueIndex = 0; 		// required by MutablePriorityQueue
     bool clientDest = false;
@@ -47,6 +48,7 @@ public:
     double getX() const;
     double getY() const;
     double getDist() const;
+    double getDistASTAR() const;
     vector<Edge*> getAdj() const;
     Vertex *getPath() const;
     void setVisited(bool visited);
@@ -121,6 +123,7 @@ public:
     void dijkstraShortestPath(int srcID);
     //shortest path from source to destination
     vector<Vertex *> aStar(const int &origin, const int &dest);
+    double getDistanceAStar(const int &origin, const int &dest);
     //getPath from dijkstra and aStar
     vector<Vertex *> getPath(const int &origin, const int &dest) const;
 

@@ -4,7 +4,7 @@ void firstProblem(CityTransfers* ct){
     int option;
     int dest;
     int clientID;
-    double distance;
+    double distance = 0;
     vector<Vertex*> p;
 
     cout << "             || ================== First Problem =================" << endl;
@@ -37,10 +37,10 @@ void firstProblem(CityTransfers* ct){
             clientID = menuOption(0, ct->clients.size());
             p = ct->graph->aStar(ct->stationID, ct->clients[clientID].getDestiny());
             showPathInGraph(ct->gv, p);
-            distance += ct->graph->findVertex(ct->clients[clientID].getDestiny())->getDist();
+            distance += ct->graph->findVertex(ct->clients[clientID].getDestiny())->getDistASTAR();
             p = ct->graph->aStar(ct->clients[clientID].getDestiny(), ct->stationID);
             showPathInGraph(ct->gv, p);
-            distance += ct->graph->findVertex(ct->stationID)->getDist();
+            distance += ct->graph->findVertex(ct->stationID)->getDistASTAR();
             cout << "Total distance traveled is: " << distance << endl;
             distance = 0;
             firstProblem(ct);
@@ -174,23 +174,23 @@ void mapMenu(CityTransfers* ct){
         case 1:
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPorto/porto_strong_nodes_xy.txt", "../Maps/MapaPorto/porto_strong_edges.txt");
-            cout << "Graph loaded" << endl << endl << endl;
+            cout << "Graph loaded" << endl << endl;
             //now get clients and stationID
             break;
         case 2:
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaEspinho/espinho_strong_nodes_xy.txt", "../Maps/MapaEspinho/espinho_strong_edges.txt");
-            cout << "Graph loaded" << endl << endl << endl;
+            cout << "Graph loaded" << endl << endl;
             break;
         case 3:
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPenafiel/penafiel_strong_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_strong_edges.txt");
-            cout << "Graph loaded" << endl << endl << endl;
+            cout << "Graph loaded" << endl << endl;
             break;
         case 4:
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPorto/porto_full_nodes_xy.txt", "../Maps/MapaPorto/porto_full_edges.txt");
-            cout << "Graph loaded" << endl << endl << endl;
+            cout << "Graph loaded" << endl << endl;
             break;
     }
 }
