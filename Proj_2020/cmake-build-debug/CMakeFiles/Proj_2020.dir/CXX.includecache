@@ -38,6 +38,10 @@ GraphViewer/graphviewer.h
 UserInterface.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/UserInterface.h
 
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.cpp
+Graph.h
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
+
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
 iostream
 -
@@ -98,10 +102,6 @@ edgetype.h
 connection.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/connection.h
 
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Menu.cpp
-Menu.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Menu.h
-
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Menu.h
 iostream
 -
@@ -111,6 +111,8 @@ utils.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.h
 CityTransfers.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.h
+UserInterface.h
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/UserInterface.h
 
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/MutablePriorityQueue.h
 vector

@@ -14,6 +14,7 @@ void firstProblem(CityTransfers* ct){
 
     switch(option){
         case 1:
+            resetGraph(ct->gv, ct->graph);
             ct->graph->dijkstraShortestPath(5813); //it will be ct.stationID
             cout << "Choose client" << endl;
             showClients(ct);

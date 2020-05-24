@@ -6,6 +6,7 @@
 #include "Graph.h"
 #include "utils.h"
 #include "CityTransfers.h"
+#include "UserInterface.h"
 
 
 using namespace std;

@@ -26,7 +26,7 @@ int main() {
     ct->clients.emplace_back("luis", 56, 9217);
     ct->clients.emplace_back("joao", 54, 8513);
     ct->clients.emplace_back("lorenco", 64, 8528);
-    cout << "clients loaded" << endl;
+    cout << "Clients loaded" << endl;
 
 
     cout << "Loading cars" << endl;
@@ -34,7 +34,7 @@ int main() {
     ct->cars.emplace_back(8);
     ct->cars.emplace_back(7);
     ct->cars.emplace_back(4);
-    cout << "Cars loaded" << endl << endl;
+    cout << "Cars loaded" << endl;
 
 
 
@@ -44,7 +44,7 @@ int main() {
     //Graph* graph = buildGraph("../Maps/MapaPorto/porto_strong_nodes_xy.txt", "../Maps/MapaPorto/porto_strong_edges.txt");
     //Graph* graph = buildGraph("../Maps/MapaEspinho/espinho_strong_nodes_xy.txt", "../Maps/MapaEspinho/espinho_strong_edges.txt");
     ct->graph = buildGraph("../Maps/MapaPenafiel/penafiel_strong_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_strong_edges.txt");
-    cout << "Graph loaded" << endl << endl;
+    cout << "Graph loaded" << endl << endl << endl << endl;
 
     ct->gv = creategraphViewer(ct->graph);
 
@@ -90,7 +90,6 @@ int main() {
         limit++;
     }
      */
-
 
     ct->gv->closeWindow();
     free(ct->gv);

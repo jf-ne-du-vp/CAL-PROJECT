@@ -42,3 +42,9 @@ void showPathInGraph(GraphViewer* gv, const vector<Vertex*>& path){
     gv->setVertexColor(path[path.size() - 1]->getID(), GREEN);
     gv->rearrange();
 }
+
+void resetGraph(GraphViewer* gv, const Graph* graph){
+    for(auto v : graph->getVertexSet()){
+        gv->setVertexColor(v->getID(), YELLOW);
+    }
+}
