@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/BuildGraph.cpp
+BuildGraph.h
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/BuildGraph.h
+
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/BuildGraph.h
 iostream
 -
@@ -19,8 +23,16 @@ fstream
 -
 Graph.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
+Person.h
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Person.h
+Car.h
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Car.h
 
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Car.h
+
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.cpp
+CityTransfers.h
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.h
 
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.h
 vector
@@ -153,6 +165,10 @@ Menu.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Menu.h
 CityTransfers.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.h
+
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.cpp
+utils.h
+/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.h
 
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.h
 vector

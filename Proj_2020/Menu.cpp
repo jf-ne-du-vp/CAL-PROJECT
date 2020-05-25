@@ -176,6 +176,18 @@ void mainMenu(CityTransfers* ct){
             mainMenu(ct);
             break;
         case 6:
+            if(ct->currentGraph == 1 || ct->currentGraph == 4){
+                //saveCars("../Maps/MapaPorto/cars.txt");
+                //saveClients("../Maps/MapaPorto/clients.txt");
+            }
+            else if(ct->currentGraph == 2){
+                //saveCars("../Maps/MapaPorto/cars.txt");
+                //saveClients("../Maps/MapaPorto/clients.txt");
+            }
+            else if(ct->currentGraph == 3){
+                //saveCars("../Maps/MapaPorto/cars.txt");
+                //saveClients("../Maps/MapaPorto/clients.txt");
+            }
             return;
     }
 }
@@ -196,6 +208,7 @@ void mapMenu(CityTransfers* ct){
 
     switch(option){
         case 1:
+            ct->currentGraph = 1;
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPorto/porto_strong_nodes_xy.txt", "../Maps/MapaPorto/porto_strong_edges.txt");
             cout << "Graph loaded" << endl << endl;
@@ -205,6 +218,7 @@ void mapMenu(CityTransfers* ct){
             //ct->cars = getCars("../Maps/MapaPorto/cars.txt")
             break;
         case 2:
+            ct->currentGraph = 2;
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaEspinho/espinho_strong_nodes_xy.txt", "../Maps/MapaEspinho/espinho_strong_edges.txt");
             cout << "Graph loaded" << endl << endl;
@@ -213,6 +227,7 @@ void mapMenu(CityTransfers* ct){
             //ct->cars = getCars("../Maps/MapaEspinho/cars.txt")
             break;
         case 3:
+            ct->currentGraph = 3;
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPenafiel/penafiel_strong_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_strong_edges.txt");
             cout << "Graph loaded" << endl << endl;
@@ -221,6 +236,7 @@ void mapMenu(CityTransfers* ct){
             //ct->cars = getCars("../Maps/MapaPenafiel/cars.txt")
             break;
         case 4:
+            ct->currentGraph = 4;
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPorto/porto_full_nodes_xy.txt", "../Maps/MapaPorto/porto_full_edges.txt");
             cout << "Graph loaded" << endl << endl;

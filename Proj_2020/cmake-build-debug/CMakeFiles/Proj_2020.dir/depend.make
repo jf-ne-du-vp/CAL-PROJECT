@@ -3,8 +3,10 @@
 
 CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o: ../BuildGraph.cpp
 CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o: ../BuildGraph.h
+CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o: ../Car.h
 CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o: ../Graph.h
 CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o: ../MutablePriorityQueue.h
+CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o: ../Person.h
 
 CMakeFiles/Proj_2020.dir/Car.cpp.o: ../Car.cpp
 CMakeFiles/Proj_2020.dir/Car.cpp.o: ../Car.h

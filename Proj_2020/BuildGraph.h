@@ -15,10 +15,14 @@
 
 Graph* buildGraph(string nodePath, string edgePath);
 
-vector<Person> getClients(string clientsPath);
+vector<Person> getClients(const string& clientsPath);
 
-vector<Car> getCars(string carsPath);
+vector<Car> getCars(const string& carsPath);
 
-int getStation(string ClientsPath);
+int getStation(const string& ClientsPath);
+
+void saveCars(const string& carsPath);
+
+void saveClients(const string& clientsPath);
 
 #endif //PROJ_2020_BUILDGRAPH_H

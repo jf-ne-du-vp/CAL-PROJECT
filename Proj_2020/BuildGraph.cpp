@@ -89,7 +89,7 @@ Graph* buildGraph(string nodePath, string edgePath){
 }
 
 
-vector<Person> getClients(string clientsPath){
+vector<Person> getClients(const string& clientsPath){
     vector<Person> res;
     ifstream stationID;
     stationID.open(clientsPath);
@@ -105,32 +105,30 @@ vector<Person> getClients(string clientsPath){
     return res;
 }
 
-vector<Car> getCars(string carsPath){
+vector<Car> getCars(const string& carsPath){
     vector<Car> res;
     ifstream cars;
     cars.open(carsPath);
     string line;
 
     if (cars.fail()) {
-        cout << "Couldn't open node file: " << carsPath  << endl;
+        cout << "Couldn't open cars file: " << carsPath  << endl;
         return res;
     }
 
-    while(getline(cars, line) != EOF){
 
-    }
 
     cars.close();
     return  res;
 }
 
 
-int getStation(string clientsPath){
+int getStation(const string& clientsPath){
     ifstream stationID;
     stationID.open(clientsPath);
 
     if (stationID.fail()) {
-        cout << "Couldn't open node file: " << clientsPath  << endl;
+        cout << "Couldn't open clients file: " << clientsPath  << endl;
         return 0;
     }
 
@@ -141,4 +139,33 @@ int getStation(string clientsPath){
 
     stationID.close();
     return id;
+}
+
+
+void saveCars(const string& carsPath){
+    ifstream cars;
+    cars.open(carsPath);
+    string line;
+
+    if (cars.fail()) {
+        cout << "Couldn't open cars file: " << carsPath  << endl;
+    }
+
+
+
+    cars.close();
+}
+
+
+void saveClients(const string& clientsPath){
+    ifstream stationID;
+    stationID.open(clientsPath);
+
+    if (stationID.fail()) {
+        cout << "Couldn't open clients file: " << clientsPath  << endl;
+    }
+
+
+
+    stationID.close();
 }

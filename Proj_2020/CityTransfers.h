@@ -20,6 +20,7 @@ public:
     Graph* graph;
     GraphViewer* gv;
     int stationID;
+    int currentGraph;
     CityTransfers();
 
     //latest path calculated
