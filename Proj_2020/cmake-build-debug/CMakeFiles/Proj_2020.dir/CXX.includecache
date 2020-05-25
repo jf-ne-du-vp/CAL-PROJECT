@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/BuildGraph.cpp
-BuildGraph.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/BuildGraph.h
-
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/BuildGraph.h
 iostream
 -
@@ -29,10 +25,6 @@ Car.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Car.h
 
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Car.h
-
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.cpp
-CityTransfers.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.h
 
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.h
 vector
@@ -112,10 +104,6 @@ edgetype.h
 connection.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/GraphViewer/connection.h
 
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Menu.cpp
-Menu.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Menu.h
-
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Menu.h
 iostream
 -
@@ -165,10 +153,6 @@ Menu.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Menu.h
 CityTransfers.h
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/CityTransfers.h
-
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.cpp
-utils.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.h
 
 /Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.h
 vector

@@ -24,6 +24,7 @@ void secondProblem(CityTransfers* ct){
     }
 }
 
+
 void firstProblem(CityTransfers* ct){
     int option;
     int dest;
@@ -212,37 +213,36 @@ void mapMenu(CityTransfers* ct){
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPorto/porto_strong_nodes_xy.txt", "../Maps/MapaPorto/porto_strong_edges.txt");
             cout << "Graph loaded" << endl << endl;
-            //now get clients and stationID
-            //ct->stationID = getStation("../Maps/MapaPorto/clients.txt")
+            ct->stationID = getStation("../Maps/MapaPorto/clients.txt");
             //ct->clients = getClients("../Maps/MapaPorto/clients.txt");
-            //ct->cars = getCars("../Maps/MapaPorto/cars.txt")
+            //ct->cars = getCars("../Maps/MapaPorto/cars.txt");
             break;
         case 2:
             ct->currentGraph = 2;
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaEspinho/espinho_strong_nodes_xy.txt", "../Maps/MapaEspinho/espinho_strong_edges.txt");
             cout << "Graph loaded" << endl << endl;
-            //ct->stationID = getStation("../Maps/MapaEspinho/clients.txt")
+            ct->stationID = getStation("../Maps/MapaEspinho/clients.txt");
             //ct->clients = getClients("../Maps/MapaEspinho/clients.txt");
-            //ct->cars = getCars("../Maps/MapaEspinho/cars.txt")
+            //ct->cars = getCars("../Maps/MapaEspinho/cars.txt");
             break;
         case 3:
             ct->currentGraph = 3;
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPenafiel/penafiel_strong_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_strong_edges.txt");
             cout << "Graph loaded" << endl << endl;
-            //ct->stationID = getStation("../Maps/MapaPenafiel/clients.txt")
+            ct->stationID = getStation("../Maps/MapaPenafiel/clients.txt");
             //ct->clients = getClients("../Maps/MapaPenafiel/clients.txt");
-            //ct->cars = getCars("../Maps/MapaPenafiel/cars.txt")
+            //ct->cars = getCars("../Maps/MapaPenafiel/cars.txt");
             break;
         case 4:
             ct->currentGraph = 4;
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPorto/porto_full_nodes_xy.txt", "../Maps/MapaPorto/porto_full_edges.txt");
             cout << "Graph loaded" << endl << endl;
-            //ct->stationID = getStation("../Maps/MapaPorto/clients.txt")
+            ct->stationID = getStation("../Maps/MapaPorto/clients.txt");
             //ct->clients = getClients("../Maps/MapaPorto/clients.txt");
-            //ct->cars = getCars("../Maps/MapaPorto/cars.txt")
+            //ct->cars = getCars("../Maps/MapaPorto/cars.txt");
             break;
     }
 }

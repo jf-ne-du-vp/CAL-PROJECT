@@ -31,8 +31,6 @@ int main() {
 
     ct->gv = creategraphViewer(ct->graph);
 
-    ct->stationID = 15859;
-
     cout << "Loading clients" << endl;
     ct->clients.emplace_back("teresa", 564, 4414);
     ct->clients.emplace_back("luis", 56, 8964);

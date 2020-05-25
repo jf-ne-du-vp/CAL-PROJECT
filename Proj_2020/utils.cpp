@@ -41,7 +41,7 @@ int showClients(CityTransfers* ct){
     int i = 0;
     for(auto client : ct->clients){
         cout << i << ":" << endl;
-        cout << "Name : " << client.getName() << " Destination: " << client.getDestiny() << endl;
+        cout << "Name : " << client.getName() << endl << "Destination: " << client.getDestiny() << endl;
         i++;
     }
     return 0;
