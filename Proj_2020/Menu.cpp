@@ -94,6 +94,7 @@ void firstProblem(CityTransfers* ct){
                 getvertexesID(ct, srcFloyd, destFloyd);
                 p = ct->graph->getfloydWarshallPath(srcFloyd, destFloyd);
                 showPathInGraph(ct->gv, p);
+                cout << "Total distance traveled is: " << ct->graph->getfloydWarshallWeight(srcFloyd, destFloyd) << endl;
                 cout << "Press one to see another path, two to leave" << endl;
             }
 

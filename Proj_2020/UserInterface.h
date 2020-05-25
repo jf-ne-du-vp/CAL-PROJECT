@@ -33,9 +33,17 @@ void resetGraph(GraphViewer* gv, const Graph* graph);
 /**
  * @brief Paint clients destinations in black, used in to show in nearNeighbor
  * @param gv Graphviewer
- * @param graph raph
+ * @param graph Graph
  * @param IDS Clients nod destination IDs
  */
 void paintClients(GraphViewer* gv, const Graph* graph, const vector<int>& IDS);
+
+
+/**
+ * @brief Nodes not accessible from station will by painted in blue, visited will be set false by dfs
+ * @param gv Graphviewer
+ * @param graph Graph
+ */
+void showNotVisitedDFS(GraphViewer* gv, const Graph* graph);
 
 #endif //PROJ_2020_USERINTERFACE_H

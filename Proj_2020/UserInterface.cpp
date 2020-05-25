@@ -64,3 +64,10 @@ void paintClients(GraphViewer* gv, const Graph* graph, const vector<int>& IDS){
         }
     }
 }
+
+void showNotVisitedDFS(GraphViewer* gv, const Graph* graph){
+    for(auto v : graph->getVertexSet()){
+        if(!v->getVisited())
+            gv->setVertexColor(v->getID(), BLUE);
+    }
+}

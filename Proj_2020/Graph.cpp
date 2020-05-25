@@ -293,7 +293,7 @@ void Graph::floydWarshallShortestPath(){
     }
 
     for(int k = 0; k < n; k++) {
-        cout << "k do floyd: " << k << endl;
+        cout << "On node in position: " << k << endl;
         for (int j = 0; j < n; j++)
             for (int i = 0; i < n; i++) {
                 if (j == k || i == k || i == j || getW(i, k) == INF || getW(k, j) == INF)
@@ -332,23 +332,10 @@ vector<Vertex *> Graph::getfloydWarshallPath(const int &orig, const int &dest) c
 
 
 double Graph::getfloydWarshallWeight(const int &orig, const int &dest) const{
-    double dist = 0;
     int v1 = findVertexIdx(findVertex(orig));
     int v2 = findVertexIdx(findVertex(dest));
 
-    if(v1 == -1 || v2 == -1 || getW(v1,v2) == INF)
-        return dist;
-
-    dist += getW(v1,v2);
-    while(v1!=v2){
-        v1 = getP(v1, v2);
-        if(v1 < 0){
-            break;
-        }
-        dist += getW(v1,v2);
-    }
-
-    return dist;
+    return getW(v1,v2);
 }
 
 
