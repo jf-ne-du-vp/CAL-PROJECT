@@ -406,6 +406,8 @@ int Graph::nearShortestDist(vector<int> destIDS){
     return minorDist;
 }
 
+
+
 vector<Vertex *> Graph::nearNeighborDij(vector<int> destIDS, int stationID){
     vector<Vertex*> res;
     vector<Vertex*> mid;
@@ -440,7 +442,6 @@ vector<Vertex *> Graph::nearNeighborDij(vector<int> destIDS, int stationID){
 
     return res;
 }
-
 
 
 /*****  Calculate distances (heuristic)   *****/

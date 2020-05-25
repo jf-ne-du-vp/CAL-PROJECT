@@ -7,10 +7,9 @@ void secondProblem(CityTransfers* ct){
 
     cout << "             || ================== Main Menu =================" << endl;
     cout << "             || (1) Nearest neighbour / using Dijkstra" << endl;
-    cout << "             || (2) Nearest neighbour / using Manhattan distance" << endl;
-    cout << "             || (3) Return to main menu" << endl;
+    cout << "             || (2) Return to main menu" << endl;
 
-    option = menuOption(1,3);
+    option = menuOption(1,2);
 
     switch(option){
         case 1:
@@ -29,10 +28,6 @@ void secondProblem(CityTransfers* ct){
             secondProblem(ct);
             break;
         case 2:
-            cout << "To be implemented" << endl;
-            secondProblem(ct);
-            break;
-        case 3:
             return;
     }
 }

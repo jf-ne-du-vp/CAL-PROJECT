@@ -27,14 +27,13 @@ int menuOption(int minimum, int max){
 }
 
 
-int showClients(CityTransfers* ct){
+void showClients(CityTransfers* ct){
     int i = 0;
     for(auto client : ct->clients){
         cout << i << ":" << endl;
         cout << "Name : " << client.getName() << endl << "Destination: " << client.getDestiny() << endl;
         i++;
     }
-    return 0;
 }
 
 
@@ -57,7 +56,7 @@ Person newClient(CityTransfers* ct){
 }
 
 
-int showCars(CityTransfers* ct){
+void showCars(CityTransfers* ct){
     int i = 0;
     for(auto car : ct->cars){
         cout << i << ":" << endl;
@@ -65,8 +64,6 @@ int showCars(CityTransfers* ct){
         cout << "Number of seats: " << car.getSeats() << endl;
         i++;
     }
-
-    return 0;
 }
 
 
