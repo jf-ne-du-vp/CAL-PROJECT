@@ -43,12 +43,24 @@ void showPathInGraph(GraphViewer* gv, const vector<Vertex*>& path){
     gv->rearrange();
 }
 
+
 void resetGraph(GraphViewer* gv, const Graph* graph){
     for(auto v : graph->getVertexSet()){
         gv->setVertexColor(v->getID(), YELLOW);
         for (Edge* e : v->getAdj()) {
                 gv->setEdgeColor(e->getID(), BLACK);
 
+        }
+    }
+}
+
+
+void paintClients(GraphViewer* gv, const Graph* graph, const vector<int>& IDS){
+    for(auto v : graph->getVertexSet()){
+        for(auto i : IDS){
+            if(v == graph->findVertex(i)){
+                gv->setVertexColor(v->getID(), BLACK);
+            }
         }
     }
 }

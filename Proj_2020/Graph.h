@@ -136,7 +136,7 @@ public:
     double getfloydWarshallWeight(const int &orig, const int &dest) const;
 
 
-
+    int nearShortestDist(vector<int> destIDS);
     vector<Vertex *> nearNeighborDij(vector<int> destIDS, int stationID);
 
 };
@@ -145,8 +145,6 @@ public:
 double euclidianDistance(Vertex* src, Vertex* dest);    //should i try other methods to calculate dist between vertexes?
 
 double manhattanDistance(Vertex* src, Vertex* dest);
-
-vector<Vertex *> appendPaths(vector<Vertex *> path1, vector<Vertex *> path2);
 
 
 #endif //PROJ_2020_GRAPH_H

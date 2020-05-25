@@ -395,32 +395,51 @@ bool Graph::dfs(Vertex* src, Vertex* dest){
 /*****  Nearest Neighbour   *****/
 
 
-vector<Vertex *> Graph::nearNeighborDij(vector<int> destIDS, int stationID){
-    int size = destIDS.size();
-    vector<Vertex*> res;
-    int currentID = stationID;
-    int nextID;
-    int eliminate = INF;
-    nearDist = 0;
+int Graph::nearShortestDist(vector<int> destIDS){
+    int minorDist = destIDS[0];
+    for(auto d : destIDS){
+        if(findVertex(d)->getDist() < findVertex(minorDist)->getDist()){
+            minorDist = d;
+        }
+    }
 
-    for(int i = 0; i < size; i++){
-        dijkstraShortestPath(currentID);
-        for(int j = 0; j < destIDS.size(); j++){
-            if(findVertex(destIDS[j])->dist < findVertex(currentID)->dist){
-                nextID = destIDS[j];
-                eliminate = j;
+    return minorDist;
+}
+
+vector<Vertex *> Graph::nearNeighborDij(vector<int> destIDS, int stationID){
+    vector<Vertex*> res;
+    vector<Vertex*> mid;
+    int numDest = destIDS.size();
+    cout << "numdest: " << numDest << endl;
+    int current = stationID;
+    int middleID;
+
+    for(int i = 0; i < numDest; i++) {
+        dijkstraShortestPath(current);
+        //int com id do mais proximo
+        middleID = nearShortestDist(destIDS);
+        //vetor com o menor percurso
+        mid = getPath(current, middleID);
+        //adicionar caminho de outro cliente
+        res.insert(res.end(), mid.begin(), mid.end());
+        //retirar do vetor de ids o calculado agora
+        for(int j = 0; j < destIDS.size();j++){
+            if(destIDS[j] == middleID){
+                destIDS.erase(destIDS.begin() + j);
+                cout << "mais um elim" << endl;
             }
         }
-        if(eliminate !=INF){
-        destIDS.erase(destIDS.begin()+ eliminate);
-        eliminate = INF;
-        }
-
-        //appendPaths(res, getPath(stationID, currentID));
-        appendPaths(res, getPath(currentID, nextID));
-        nearDist += findVertex(currentID)->dist;
-        currentID = nextID;
+        //atualizar a distancia ja percorrida
+        nearDist += findVertex(middleID)->getDist();
+        //atualizar a partir do qual se vai procurar
+        current = middleID;
+        cout << "current: " << current << "na iter: " << i << endl;
     }
+
+    dijkstraShortestPath(current);
+    mid = getPath(current, stationID);
+    res.insert(res.end(), mid.begin(), mid.end());
+    nearDist += findVertex(stationID)->getDist();
 
     return res;
 }
@@ -436,18 +455,4 @@ double euclidianDistance(Vertex* src, Vertex* dest){
 
 double manhattanDistance(Vertex* src, Vertex* dest){
     return (abs(src->getX() - dest->getX()) + abs(src->getY() - dest->getY()));
-}
-
-vector<Vertex *> appendPaths(vector<Vertex *> path1, vector<Vertex *> path2){
-    vector<Vertex *> res;
-
-    for(auto v : path1){
-        res.push_back(v);
-    }
-
-    for(auto v : path2){
-        res.push_back(v);
-    }
-
-    return res;
 }

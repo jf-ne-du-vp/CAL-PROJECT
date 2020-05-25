@@ -3,6 +3,7 @@
 void secondProblem(CityTransfers* ct){
     int option;
     vector<int> IDS;
+    vector<Vertex*> p;
 
     cout << "             || ================== Main Menu =================" << endl;
     cout << "             || (1) Nearest neighbour / using Dijkstra" << endl;
@@ -14,12 +15,13 @@ void secondProblem(CityTransfers* ct){
     switch(option){
         case 1:
             resetGraph(ct->gv, ct->graph);
-            for(auto c : ct->clients){
+            for(const auto& c : ct->clients){
                 IDS.push_back(c.getDestiny());
             }
-            cout << "before " << endl;
-            ct->graph->nearNeighborDij(IDS, ct->stationID);
-            showPathInGraph(ct->gv, ct->graph->nearNeighborDij(IDS, ct->stationID));
+
+            p = ct->graph->nearNeighborDij(IDS, ct->stationID);
+            showPathInGraph(ct->gv, p);
+            paintClients(ct->gv, ct->graph, IDS);
             cout << "Distance traveled: " << ct->graph->getnearDist() << endl;
             IDS.erase(IDS.begin(), IDS.end());
             secondProblem(ct);
@@ -245,6 +247,7 @@ void mapMenu(CityTransfers* ct){
             ct->clients.emplace_back("Luis", 56, 8964);
             ct->clients.emplace_back("Joao", 54, 489);
             ct->clients.emplace_back("Lourenco", 64, 5328);
+            ct->clients.emplace_back("Maria", 23, 11867);
             break;
         case 3:
             ct->currentGraph = 3;
