@@ -211,6 +211,7 @@ void mainMenu(CityTransfers* ct){
         case 6:
             ct->graph->dfs(ct->graph->findVertex(ct->stationID));
             showNotVisitedDFS(ct->gv, ct->graph);
+            cout << "Non accessible nodes from station node are displayed in blue" << endl;
             mainMenu(ct);
             break;
         case 7:
@@ -219,11 +220,11 @@ void mainMenu(CityTransfers* ct){
                 //saveClients("../Maps/MapaPorto/clients.txt", ct->clients);
                 ct->clients.emplace_back("Teresa", 564, 1090);
             }
-            else if(ct->currentGraph == 2){
+            else if(ct->currentGraph == 2 || ct->currentGraph == 5){
                 saveCars("../Maps/MapaEspinho/cars.txt", ct->cars);
                 //saveClients("../Maps/MapaEspinho/clients.txt", ct->clients);
             }
-            else if(ct->currentGraph == 3 || ct->currentGraph == 5){
+            else if(ct->currentGraph == 3 || ct->currentGraph == 6){
                 saveCars("../Maps/MapaPenafiel/cars.txt", ct->cars);
                 //saveClients("../Maps/MapaPenafiel/clients.txt", ct->clients);
             }
@@ -241,11 +242,12 @@ void mapMenu(CityTransfers* ct){
     cout << "             || (2) Espinho map / Strong" << endl;
     cout << "             || (3) Penafiel map / Strong" << endl;
     cout << "             || (4) Porto map / Full (to test connectivity)" << endl;
-    cout << "             || (5) Penafiel map / Full (to test connectivity)" << endl;
+    cout << "             || (5) Espinho map / Full (to test connectivity)" << endl;
+    cout << "             || (6) Penafiel map / Full (to test connectivity)" << endl;
 
 
 
-    option = menuOption(1,5);
+    option = menuOption(1,6);
 
     switch(option){
         case 1:
@@ -304,6 +306,20 @@ void mapMenu(CityTransfers* ct){
             break;
         case 5:
             ct->currentGraph = 5;
+            cout << "Loading Graph" << endl;
+            ct->graph = buildGraph("../Maps/MapaEspinho/espinho_full_nodes_xy.txt", "../Maps/MapaEspinho/espinho_full_edges.txt");
+            cout << "Graph loaded" << endl << endl;
+            ct->stationID = getStation("../Maps/MapaEspinho/clients.txt");
+            //ct->clients = getClients("../Maps/MapaEspinho/clients.txt");
+            ct->cars = getCars("../Maps/MapaEspinho/cars.txt");
+            ct->clients.emplace_back("Teresa", 564, 4414);
+            ct->clients.emplace_back("Luis", 56, 8964);
+            ct->clients.emplace_back("Joao", 54, 489);
+            ct->clients.emplace_back("Lourenco", 64, 5328);
+            ct->clients.emplace_back("Maria", 23, 11867);
+            break;
+        case 6:
+            ct->currentGraph = 6;
             cout << "Loading Graph" << endl;
             ct->graph = buildGraph("../Maps/MapaPenafiel/penafiel_full_nodes_xy.txt", "../Maps/MapaPenafiel/penafiel_full_edges.txt");
             cout << "Graph loaded" << endl << endl;

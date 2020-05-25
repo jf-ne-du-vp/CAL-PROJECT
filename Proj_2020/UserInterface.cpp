@@ -66,8 +66,13 @@ void paintClients(GraphViewer* gv, const Graph* graph, const vector<int>& IDS){
 }
 
 void showNotVisitedDFS(GraphViewer* gv, const Graph* graph){
+    int non = 0;
     for(auto v : graph->getVertexSet()){
-        if(!v->getVisited())
+        if(!v->getVisited()){
             gv->setVertexColor(v->getID(), BLUE);
+            non++;
+        }
     }
+
+    cout << "There " << non << " non accesssible nodes from station in current map." << endl;
 }
