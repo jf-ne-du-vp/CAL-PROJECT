@@ -22,6 +22,8 @@ void secondProblem(CityTransfers* ct){
             p = ct->graph->nearNeighborDij(IDS, ct->stationID);
             showPathInGraph(ct->gv, p);
             paintClients(ct->gv, ct->graph, IDS);
+            cout << "Number of clients in this route: " << IDS.size() << endl;
+            cout << "Station identified in green and each client destination in black" << endl;
             cout << "Distance traveled: " << ct->graph->getnearDist() << endl;
             IDS.erase(IDS.begin(), IDS.end());
             secondProblem(ct);

@@ -410,7 +410,6 @@ vector<Vertex *> Graph::nearNeighborDij(vector<int> destIDS, int stationID){
     vector<Vertex*> res;
     vector<Vertex*> mid;
     int numDest = destIDS.size();
-    cout << "numdest: " << numDest << endl;
     int current = stationID;
     int middleID;
 
@@ -426,14 +425,12 @@ vector<Vertex *> Graph::nearNeighborDij(vector<int> destIDS, int stationID){
         for(int j = 0; j < destIDS.size();j++){
             if(destIDS[j] == middleID){
                 destIDS.erase(destIDS.begin() + j);
-                cout << "mais um elim" << endl;
             }
         }
         //atualizar a distancia ja percorrida
         nearDist += findVertex(middleID)->getDist();
         //atualizar a partir do qual se vai procurar
         current = middleID;
-        cout << "current: " << current << "na iter: " << i << endl;
     }
 
     dijkstraShortestPath(current);
