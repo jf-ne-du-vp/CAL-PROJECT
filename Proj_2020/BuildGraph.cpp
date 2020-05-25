@@ -116,7 +116,21 @@ vector<Car> getCars(const string& carsPath){
         return res;
     }
 
+    getline(cars, line);
+    int numCars = stoi(line);
 
+    for(int i = 0; i < numCars; i++){
+        string midS;
+        int ID;
+        int seats;
+
+        getline(cars, midS);
+        ID = stoi(midS);
+        getline(cars, midS);
+        seats = stoi(midS);
+
+        res.emplace_back(ID, seats);
+    }
 
     cars.close();
     return  res;
@@ -142,23 +156,29 @@ int getStation(const string& clientsPath){
 }
 
 
-void saveCars(const string& carsPath){
-    ifstream cars;
-    cars.open(carsPath);
+void saveCars(const string& carsPath, vector<Car> cars){
+    ofstream car;
+    car.open(carsPath);
     string line;
 
-    if (cars.fail()) {
+    if (car.fail()) {
         cout << "Couldn't open cars file: " << carsPath  << endl;
     }
 
+    car << cars.size();
+
+    for(int i = 0; i < cars.size(); i++){
+        car << endl << cars[i].getID();
+        car << endl << cars[i].getSeats();
+    }
 
 
-    cars.close();
+    car.close();
 }
 
 
-void saveClients(const string& clientsPath){
-    ifstream stationID;
+void saveClients(const string& clientsPath, vector<Person> clients){
+    ofstream stationID;
     stationID.open(clientsPath);
 
     if (stationID.fail()) {

@@ -4,12 +4,15 @@
 
 class Car {
     int seats;
+    int ID;
 
 public:
     Car();
-    explicit Car(int seats);
+    explicit Car(int seats, int ID);
     int getSeats() const;
     void setSeats(int seats);
+    int getID() const;
+    void setID(int ID);
 };
 
 

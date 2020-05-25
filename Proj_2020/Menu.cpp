@@ -80,7 +80,7 @@ void carMenu(CityTransfers* ct){
     int option;
     int id;
 
-    cout << "             || ================== Client Menu =================" << endl;
+    cout << "             || ================== Car Menu =================" << endl;
     cout << "             || (1) Add Car" << endl;
     cout << "             || (2) Remove Car" << endl;
     cout << "             || (3) Return to main menu" << endl;
@@ -94,7 +94,7 @@ void carMenu(CityTransfers* ct){
             break;
         case 2:
             if(!ct->cars.empty()) {
-                showClients(ct);
+                showCars(ct);
                 cout << "Car to remove: " << endl;
                 id = menuOption(0, ct->cars.size());
                 ct->cars.erase(ct->cars.begin() + id);
@@ -178,16 +178,17 @@ void mainMenu(CityTransfers* ct){
             break;
         case 6:
             if(ct->currentGraph == 1 || ct->currentGraph == 4){
-                //saveCars("../Maps/MapaPorto/cars.txt");
-                //saveClients("../Maps/MapaPorto/clients.txt");
+                saveCars("../Maps/MapaPorto/cars.txt", ct->cars);
+                //saveClients("../Maps/MapaPorto/clients.txt", ct->clients);
+                ct->clients.emplace_back("Teresa", 564, 1090);
             }
             else if(ct->currentGraph == 2){
-                //saveCars("../Maps/MapaPorto/cars.txt");
-                //saveClients("../Maps/MapaPorto/clients.txt");
+                saveCars("../Maps/MapaEspinho/cars.txt", ct->cars);
+                //saveClients("../Maps/MapaEspinho/clients.txt", ct->clients);
             }
             else if(ct->currentGraph == 3){
-                //saveCars("../Maps/MapaPorto/cars.txt");
-                //saveClients("../Maps/MapaPorto/clients.txt");
+                saveCars("../Maps/MapaPenafiel/cars.txt", ct->cars);
+                //saveClients("../Maps/MapaPenafiel/clients.txt", ct->clients);
             }
             return;
     }
@@ -215,7 +216,11 @@ void mapMenu(CityTransfers* ct){
             cout << "Graph loaded" << endl << endl;
             ct->stationID = getStation("../Maps/MapaPorto/clients.txt");
             //ct->clients = getClients("../Maps/MapaPorto/clients.txt");
-            //ct->cars = getCars("../Maps/MapaPorto/cars.txt");
+            ct->cars = getCars("../Maps/MapaPorto/cars.txt");
+            ct->clients.emplace_back("Luis", 56, 50570);
+            ct->clients.emplace_back("Joao", 54, 5665);
+            ct->clients.emplace_back("Lourenco", 64, 4083);
+            ct->clients.emplace_back("Teresa", 564, 1090);
             break;
         case 2:
             ct->currentGraph = 2;
@@ -224,7 +229,11 @@ void mapMenu(CityTransfers* ct){
             cout << "Graph loaded" << endl << endl;
             ct->stationID = getStation("../Maps/MapaEspinho/clients.txt");
             //ct->clients = getClients("../Maps/MapaEspinho/clients.txt");
-            //ct->cars = getCars("../Maps/MapaEspinho/cars.txt");
+            ct->cars = getCars("../Maps/MapaEspinho/cars.txt");
+            ct->clients.emplace_back("Teresa", 564, 4414);
+            ct->clients.emplace_back("Luis", 56, 8964);
+            ct->clients.emplace_back("Joao", 54, 489);
+            ct->clients.emplace_back("Lourenco", 64, 5328);
             break;
         case 3:
             ct->currentGraph = 3;
@@ -233,7 +242,11 @@ void mapMenu(CityTransfers* ct){
             cout << "Graph loaded" << endl << endl;
             ct->stationID = getStation("../Maps/MapaPenafiel/clients.txt");
             //ct->clients = getClients("../Maps/MapaPenafiel/clients.txt");
-            //ct->cars = getCars("../Maps/MapaPenafiel/cars.txt");
+            ct->cars = getCars("../Maps/MapaPenafiel/cars.txt");
+            ct->clients.emplace_back("Teresa", 564, 9236);
+            ct->clients.emplace_back("Luis", 56, 842);
+            ct->clients.emplace_back("Joao", 54, 9967);
+            ct->clients.emplace_back("Lourenco", 64, 1511);
             break;
         case 4:
             ct->currentGraph = 4;
@@ -242,7 +255,11 @@ void mapMenu(CityTransfers* ct){
             cout << "Graph loaded" << endl << endl;
             ct->stationID = getStation("../Maps/MapaPorto/clients.txt");
             //ct->clients = getClients("../Maps/MapaPorto/clients.txt");
-            //ct->cars = getCars("../Maps/MapaPorto/cars.txt");
+            ct->cars = getCars("../Maps/MapaPorto/cars.txt");
+            ct->clients.emplace_back("Luis", 56, 50570);
+            ct->clients.emplace_back("Joao", 54, 5665);
+            ct->clients.emplace_back("Lourenco", 64, 4083);
+            ct->clients.emplace_back("Teresa", 564, 1090);
             break;
     }
 }

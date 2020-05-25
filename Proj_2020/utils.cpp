@@ -15,6 +15,7 @@ vector<Vertex *> appendPaths(vector<Vertex *> path1, vector<Vertex *> path2){
     return res;
 }
 
+
 int menuOption(int minimum, int max){
     int numberInput;
 
@@ -36,6 +37,7 @@ int menuOption(int minimum, int max){
     }
     return numberInput;
 }
+
 
 int showClients(CityTransfers* ct){
     int i = 0;
@@ -66,10 +68,12 @@ Person newClient(CityTransfers* ct){
     return Person(name, nif, destID);
 }
 
+
 int showCars(CityTransfers* ct){
     int i = 0;
     for(auto car : ct->cars){
         cout << i << ":" << endl;
+        cout << "Car id:" << car.getID() << endl;
         cout << "Number of seats: " << car.getSeats() << endl;
         i++;
     }
@@ -83,5 +87,7 @@ Car newCar(CityTransfers* ct){
     cout << "Number of seats available in car (between 4 and 8): " << endl;
     seats = menuOption(4,8);
 
-    return Car(seats);
+    int ID = ct->cars.size()+1;
+
+    return Car(seats, ID);
 }

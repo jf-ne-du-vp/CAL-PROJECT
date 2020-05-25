@@ -21,8 +21,8 @@ vector<Car> getCars(const string& carsPath);
 
 int getStation(const string& ClientsPath);
 
-void saveCars(const string& carsPath);
+void saveCars(const string& carsPath, vector<Car> cars);
 
-void saveClients(const string& clientsPath);
+void saveClients(const string& clientsPath, vector<Person> clients);
 
 #endif //PROJ_2020_BUILDGRAPH_H

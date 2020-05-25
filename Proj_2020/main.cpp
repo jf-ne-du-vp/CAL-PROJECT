@@ -23,42 +23,25 @@ int main() {
     //here to choose map, then load clients, and cars
 
     mapMenu(ct);
+    ct->gv = creategraphViewer(ct->graph);
+    mainMenu(ct);
 
     //cout << "Loading Graph" << endl;
     //Graph* graph = buildGraph("../Maps/GridGraphs/16x16/nodes.txt", "../Maps/GridGraphs/16x16/edges.txt");
     //Graph* graph = buildGraph("../Maps/PortugalMaps/Lisboa/nodes_x_y_lisboa.txt", "../Maps/PortugalMaps/Lisboa/edges_lisboa.txt");
     //cout << "Graph loaded" << endl << endl << endl << endl;
 
-    ct->gv = creategraphViewer(ct->graph);
 
-    cout << "Loading clients" << endl;
-    ct->clients.emplace_back("teresa", 564, 4414);
-    ct->clients.emplace_back("luis", 56, 8964);
-    ct->clients.emplace_back("joao", 54, 489);
-    ct->clients.emplace_back("lorenco", 64, 5328);
-    cout << "Clients loaded" << endl;
-
-
-    cout << "Loading cars" << endl;
-    ct->cars.emplace_back(5);
-    ct->cars.emplace_back(8);
-    ct->cars.emplace_back(7);
-    ct->cars.emplace_back(4);
-    cout << "Cars loaded" << endl;
-
-    ct->stationID = 15859;
 
     //fazer dfs para processar
     //cout << "Pre-procesing starting" << endl;
     //fazer pre tratamento dos nao acessivieis e polos a preto
     //cout << "Pre-procesing finished, not acessible nodes represnetd in black" << endl;
 
-    mainMenu(ct);
 
     //for grid
     //graph->dijkstraShortestPath(34);
     //vector<Vertex *> v1 = graph->getPath(34, 282);
-
     //graph->dijkstraShortestPath(27744); //Porto
     //vector<Vertex *> v1 = graph->getPath(27744, 26781);
     //graph->dijkstraShortestPath(2783);
