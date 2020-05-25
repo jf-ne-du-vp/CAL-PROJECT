@@ -6,35 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.cpp
-Graph.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
-
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Graph.h
-iostream
--
-vector
--
-cmath
--
-climits
--
-stack
--
-list
--
-queue
--
-timeMeasure.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/timeMeasure.h
-MutablePriorityQueue.h
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/MutablePriorityQueue.h
-
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/MutablePriorityQueue.h
-vector
--
-
-/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/timeMeasure.h
-chrono
--
-
