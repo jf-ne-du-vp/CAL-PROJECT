@@ -92,7 +92,7 @@ class Graph {
     //for Floyd-Warshall
     vector<vector<double>> W;
     vector<vector<int>> P;
-    int nearDist = 0;
+    double nearDist = 0;
 
 public:
     Vertex* findVertex(int ID) const;
@@ -101,8 +101,8 @@ public:
     int getNumVertex() const;
     vector<Vertex *> getVertexSet() const;
     int findVertexIdx(Vertex* vertex) const;
-    int getnearDist() const;
-    void setnearDist(int nearDist);
+    double getnearDist() const;
+    void setnearDist(double nearDist);
 
     //for Floyd-Warshall
     void resetMatrixW(int size);
@@ -145,6 +145,8 @@ public:
 double euclidianDistance(Vertex* src, Vertex* dest);    //should i try other methods to calculate dist between vertexes?
 
 double manhattanDistance(Vertex* src, Vertex* dest);
+
+vector<Vertex *> appendPaths(vector<Vertex *> path1, vector<Vertex *> path2);
 
 
 #endif //PROJ_2020_GRAPH_H

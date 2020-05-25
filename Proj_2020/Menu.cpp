@@ -2,6 +2,7 @@
 
 void secondProblem(CityTransfers* ct){
     int option;
+    vector<int> IDS;
 
     cout << "             || ================== Main Menu =================" << endl;
     cout << "             || (1) Nearest neighbour / using Dijkstra" << endl;
@@ -12,7 +13,15 @@ void secondProblem(CityTransfers* ct){
 
     switch(option){
         case 1:
-            cout << "To be implemented" << endl;
+            resetGraph(ct->gv, ct->graph);
+            for(auto c : ct->clients){
+                IDS.push_back(c.getDestiny());
+            }
+            cout << "before " << endl;
+            ct->graph->nearNeighborDij(IDS, ct->stationID);
+            showPathInGraph(ct->gv, ct->graph->nearNeighborDij(IDS, ct->stationID));
+            cout << "Distance traveled: " << ct->graph->getnearDist() << endl;
+            IDS.erase(IDS.begin(), IDS.end());
             secondProblem(ct);
             break;
         case 2:
@@ -108,6 +117,7 @@ void carMenu(CityTransfers* ct){
     }
 }
 
+
 void clientMenu(CityTransfers* ct){
     int option;
     int id;
@@ -140,6 +150,7 @@ void clientMenu(CityTransfers* ct){
     }
 }
 
+
 void mainMenu(CityTransfers* ct){
     int option;
 
@@ -159,8 +170,7 @@ void mainMenu(CityTransfers* ct){
             mainMenu(ct);
             break;
         case 2:
-            //secondProblem();
-            cout << "To be implemented" << endl;
+            secondProblem(ct);
             mainMenu(ct);
             break;
         case 3:
@@ -193,6 +203,7 @@ void mainMenu(CityTransfers* ct){
             return;
     }
 }
+
 
 void mapMenu(CityTransfers* ct){
     int option;

@@ -174,12 +174,12 @@ int Graph::nextVertex(int i, int j) const{
     return -1;
 }
 
-int Graph::getnearDist() const{
+double Graph::getnearDist() const{
     return this->nearDist;
 }
 
 
-void Graph::setnearDist(int nearDist){
+void Graph::setnearDist(double nearDist){
     this->nearDist = nearDist;
 }
 
@@ -394,18 +394,36 @@ bool Graph::dfs(Vertex* src, Vertex* dest){
 
 /*****  Nearest Neighbour   *****/
 
+
 vector<Vertex *> Graph::nearNeighborDij(vector<int> destIDS, int stationID){
     int size = destIDS.size();
     vector<Vertex*> res;
     int currentID = stationID;
+    int nextID;
+    int eliminate = INF;
+    nearDist = 0;
 
     for(int i = 0; i < size; i++){
         dijkstraShortestPath(currentID);
+        for(int j = 0; j < destIDS.size(); j++){
+            if(findVertex(destIDS[j])->dist < findVertex(currentID)->dist){
+                nextID = destIDS[j];
+                eliminate = j;
+            }
+        }
+        if(eliminate !=INF){
+        destIDS.erase(destIDS.begin()+ eliminate);
+        eliminate = INF;
+        }
 
+        //appendPaths(res, getPath(stationID, currentID));
+        appendPaths(res, getPath(currentID, nextID));
+        nearDist += findVertex(currentID)->dist;
+        currentID = nextID;
     }
 
+    return res;
 }
-
 
 
 
@@ -418,4 +436,18 @@ double euclidianDistance(Vertex* src, Vertex* dest){
 
 double manhattanDistance(Vertex* src, Vertex* dest){
     return (abs(src->getX() - dest->getX()) + abs(src->getY() - dest->getY()));
+}
+
+vector<Vertex *> appendPaths(vector<Vertex *> path1, vector<Vertex *> path2){
+    vector<Vertex *> res;
+
+    for(auto v : path1){
+        res.push_back(v);
+    }
+
+    for(auto v : path2){
+        res.push_back(v);
+    }
+
+    return res;
 }

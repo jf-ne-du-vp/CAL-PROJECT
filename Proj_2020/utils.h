@@ -8,7 +8,7 @@
 #include "Car.h"
 #include "CityTransfers.h"
 
-vector<Vertex *> appendPaths(vector<Vertex *> path1, vector<Vertex *> path2);
+
 
 int menuOption(int minimum, int max);
 
