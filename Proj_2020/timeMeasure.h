@@ -16,7 +16,7 @@ void startTimeCount();
 
 /**
  * @brief Get time since start clock time
- * @return Elapsed time, miliseconds
+ * @return Elapsed time, milliseconds
  */
 long long getTimePassed();
 

@@ -190,6 +190,8 @@ void Graph::setnearDist(double nearDist){
 /*****  Dijkstra   *****/
 
 void Graph::dijkstraShortestPath(int srcID){
+    //startTimeCount();
+
     auto s = findVertex(srcID);
 
     for(auto v : vertexSet){
@@ -216,6 +218,8 @@ void Graph::dijkstraShortestPath(int srcID){
             }
         }
     }
+
+    //cout << "Dijkstra / Milliseconds working: " << getTimePassed() << endl;
 }
 
 
@@ -235,6 +239,8 @@ vector<Vertex *> Graph::getPath(const int &origin, const int &dest) const{
 /*****  A-star   *****/
 
 vector<Vertex *> Graph::aStar(const int &origin, const int &dest){
+    //startTimeCount();
+
     auto src = findVertex(origin);
     auto final = findVertex(dest);
 
@@ -271,6 +277,7 @@ vector<Vertex *> Graph::aStar(const int &origin, const int &dest){
     }
 
 
+    //cout << "A-STAR / Milliseconds working: " << getTimePassed() << endl;
     return getPath(origin, dest);
 }
 
@@ -279,6 +286,8 @@ vector<Vertex *> Graph::aStar(const int &origin, const int &dest){
 
 
 void Graph::floydWarshallShortestPath(){
+    //startTimeCount();
+
     int n = getNumVertex();
     resetMatrixW(n);
     resetMatrixP(n);
@@ -305,6 +314,8 @@ void Graph::floydWarshallShortestPath(){
                 }
             }
     }
+
+    //cout << "Floyd-Warshall / Milliseconds working: " << getTimePassed() << endl;
 }
 
 
@@ -350,11 +361,15 @@ void Graph::dfsVisit(Vertex* vertex){
 }
 
 void Graph::dfs(Vertex* src){
+    //startTimeCount();
+
     for(auto it : vertexSet){
         it->visited = false;
     }
 
     dfsVisit(src);
+
+    //cout << "DFS / Milliseconds working: " << getTimePassed() << endl;
 }
 
 
@@ -396,6 +411,8 @@ int Graph::nearShortestDist(vector<int> destIDS){
 
 
 vector<Vertex *> Graph::nearNeighborDij(vector<int> destIDS, int stationID){
+    //startTimeCount();
+
     vector<Vertex*> res;
     vector<Vertex*> mid;
     int numDest = destIDS.size();
@@ -426,6 +443,8 @@ vector<Vertex *> Graph::nearNeighborDij(vector<int> destIDS, int stationID){
     mid = getPath(current, stationID);
     res.insert(res.end(), mid.begin(), mid.end());
     nearDist += findVertex(stationID)->getDist();
+
+    //cout << "NN / Milliseconds working: " << getTimePassed() << endl;
 
     return res;
 }

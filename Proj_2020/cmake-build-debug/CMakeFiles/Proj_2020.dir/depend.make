@@ -7,6 +7,7 @@ CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o: ../Car.h
 CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o: ../Graph.h
 CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o: ../MutablePriorityQueue.h
 CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o: ../Person.h
+CMakeFiles/Proj_2020.dir/BuildGraph.cpp.o: ../timeMeasure.h
 
 CMakeFiles/Proj_2020.dir/Car.cpp.o: ../Car.cpp
 CMakeFiles/Proj_2020.dir/Car.cpp.o: ../Car.h
@@ -23,10 +24,12 @@ CMakeFiles/Proj_2020.dir/CityTransfers.cpp.o: ../MutablePriorityQueue.h
 CMakeFiles/Proj_2020.dir/CityTransfers.cpp.o: ../Path.h
 CMakeFiles/Proj_2020.dir/CityTransfers.cpp.o: ../Person.h
 CMakeFiles/Proj_2020.dir/CityTransfers.cpp.o: ../UserInterface.h
+CMakeFiles/Proj_2020.dir/CityTransfers.cpp.o: ../timeMeasure.h
 
 CMakeFiles/Proj_2020.dir/Graph.cpp.o: ../Graph.cpp
 CMakeFiles/Proj_2020.dir/Graph.cpp.o: ../Graph.h
 CMakeFiles/Proj_2020.dir/Graph.cpp.o: ../MutablePriorityQueue.h
+CMakeFiles/Proj_2020.dir/Graph.cpp.o: ../timeMeasure.h
 
 CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.o: ../GraphViewer/connection.cpp
 CMakeFiles/Proj_2020.dir/GraphViewer/connection.cpp.o: ../GraphViewer/connection.h
@@ -49,12 +52,14 @@ CMakeFiles/Proj_2020.dir/Menu.cpp.o: ../MutablePriorityQueue.h
 CMakeFiles/Proj_2020.dir/Menu.cpp.o: ../Path.h
 CMakeFiles/Proj_2020.dir/Menu.cpp.o: ../Person.h
 CMakeFiles/Proj_2020.dir/Menu.cpp.o: ../UserInterface.h
+CMakeFiles/Proj_2020.dir/Menu.cpp.o: ../timeMeasure.h
 CMakeFiles/Proj_2020.dir/Menu.cpp.o: ../utils.h
 
 CMakeFiles/Proj_2020.dir/Path.cpp.o: ../Graph.h
 CMakeFiles/Proj_2020.dir/Path.cpp.o: ../MutablePriorityQueue.h
 CMakeFiles/Proj_2020.dir/Path.cpp.o: ../Path.cpp
 CMakeFiles/Proj_2020.dir/Path.cpp.o: ../Path.h
+CMakeFiles/Proj_2020.dir/Path.cpp.o: ../timeMeasure.h
 
 CMakeFiles/Proj_2020.dir/Person.cpp.o: ../Person.cpp
 CMakeFiles/Proj_2020.dir/Person.cpp.o: ../Person.h
@@ -66,6 +71,7 @@ CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../GraphViewer/graphviewer.h
 CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../MutablePriorityQueue.h
 CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../UserInterface.cpp
 CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../UserInterface.h
+CMakeFiles/Proj_2020.dir/UserInterface.cpp.o: ../timeMeasure.h
 
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../BuildGraph.h
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../Car.h
@@ -80,7 +86,11 @@ CMakeFiles/Proj_2020.dir/main.cpp.o: ../Path.h
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../Person.h
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../UserInterface.h
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../main.cpp
+CMakeFiles/Proj_2020.dir/main.cpp.o: ../timeMeasure.h
 CMakeFiles/Proj_2020.dir/main.cpp.o: ../utils.h
+
+CMakeFiles/Proj_2020.dir/timeMeasure.cpp.o: ../timeMeasure.cpp
+CMakeFiles/Proj_2020.dir/timeMeasure.cpp.o: ../timeMeasure.h
 
 CMakeFiles/Proj_2020.dir/utils.cpp.o: ../BuildGraph.h
 CMakeFiles/Proj_2020.dir/utils.cpp.o: ../Car.h
@@ -93,6 +103,7 @@ CMakeFiles/Proj_2020.dir/utils.cpp.o: ../MutablePriorityQueue.h
 CMakeFiles/Proj_2020.dir/utils.cpp.o: ../Path.h
 CMakeFiles/Proj_2020.dir/utils.cpp.o: ../Person.h
 CMakeFiles/Proj_2020.dir/utils.cpp.o: ../UserInterface.h
+CMakeFiles/Proj_2020.dir/utils.cpp.o: ../timeMeasure.h
 CMakeFiles/Proj_2020.dir/utils.cpp.o: ../utils.cpp
 CMakeFiles/Proj_2020.dir/utils.cpp.o: ../utils.h
 
