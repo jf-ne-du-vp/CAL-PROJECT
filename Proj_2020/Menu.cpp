@@ -280,6 +280,7 @@ void mapMenu(CityTransfers* ct){
             ct->clients.emplace_back("Luis", 56, 842);
             ct->clients.emplace_back("Joao", 54, 9967);
             ct->clients.emplace_back("Lourenco", 64, 1511);
+            ct->clients.emplace_back("Tiago", 987, 7965);
             break;
         case 4:
             ct->currentGraph = 4;
