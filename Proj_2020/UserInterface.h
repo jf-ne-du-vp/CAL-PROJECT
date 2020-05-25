@@ -41,6 +41,7 @@ void paintClients(GraphViewer* gv, const Graph* graph, const vector<int>& IDS);
 
 /**
  * @brief Nodes not accessible from station will by painted in blue, visited will be set false by dfs
+ * Also writes to stdout how many nodes are non accessible from station node
  * @param gv Graphviewer
  * @param graph Graph
  */
