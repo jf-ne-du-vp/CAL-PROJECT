@@ -39,13 +39,17 @@ void firstProblem(CityTransfers* ct){
     int clientID;
     double distance = 0;
     vector<Vertex*> p;
+    int srcFloyd;
+    int destFloyd;
 
     cout << "             || ================== First Problem =================" << endl;
     cout << "             || (1) Dijkstra / Calculate and show route for one client " << endl;
     cout << "             || (2) A Star / Calculate and show route for one client" << endl;
-    cout << "             || (3) Return to main menu" << endl;
+    cout << "             || (3) Floyd-Warshall / Calculate and show route between any two nodes" << endl;
+    cout << "             ||     Be aware it will take too long to calculate " << endl;
+    cout << "             || (4) Return to main menu" << endl;
 
-    option = menuOption(1,3);
+    option = menuOption(1,4);
 
     switch(option){
         case 1:
@@ -79,6 +83,23 @@ void firstProblem(CityTransfers* ct){
             firstProblem(ct);
             break;
         case 3:
+            resetGraph(ct->gv, ct->graph);
+            cout << "Starting to calculate Floyd-Warshall" << endl;
+            ct->graph->floydWarshallShortestPath();
+            cout << "Calculated Floyd-Warshall" << endl;
+
+            cout << "Press one to see path, two to leave" << endl;
+            while(menuOption(1,2) != 2) {
+                cout << "Vertexes IDs:" << endl;
+                getvertexesID(ct, srcFloyd, destFloyd);
+                p = ct->graph->getfloydWarshallPath(srcFloyd, destFloyd);
+                showPathInGraph(ct->gv, p);
+                cout << "Press one to see another path, two to leave" << endl;
+            }
+
+            firstProblem(ct);
+            break;
+        case 4:
             return;
     }
 }

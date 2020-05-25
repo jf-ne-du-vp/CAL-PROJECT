@@ -48,4 +48,13 @@ void showCars(CityTransfers* ct);
  */
 Car newCar(CityTransfers* ct);
 
+
+/**
+ * @brief Get vertex start ID and destination vertex ID for Floyd-Warshall path
+ * @param ct Company with all info
+ * @param srcFloyd ID of vertex source, to be given by user in this function
+ * @param destFloyd ID of vertex destination, to be given by user in this function
+ */
+void getvertexesID(CityTransfers* ct, int &srcFloyd, int &destFloyd);
+
 #endif //PROJ_2020_UTILS_H

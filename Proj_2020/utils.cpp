@@ -76,3 +76,21 @@ Car newCar(CityTransfers* ct){
 
     return Car(seats, ID);
 }
+
+
+
+void getvertexesID(CityTransfers* ct, int &srcFloyd, int &destFloyd){
+    cout << "Type source ID: " << endl;
+    cin >> srcFloyd;
+    while(ct->graph->findVertex(srcFloyd) == NULL){
+        cout << "Invalid ID, try again: " << endl;
+        cin>> srcFloyd;
+    }
+
+    cout << "Type destination ID: " << endl;
+    cin >> destFloyd;
+    while(ct->graph->findVertex(destFloyd) == NULL){
+        cout << "Invalid ID, try again: " << endl;
+        cin>> destFloyd;
+    }
+}
