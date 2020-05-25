@@ -8,6 +8,7 @@
 #include <stack>
 #include <list>
 #include <queue>
+#include <timeMeasure.h>
 
 
 #include "MutablePriorityQueue.h"
