@@ -13,6 +13,7 @@
 #include "MutablePriorityQueue.h"
 
 
+
 using namespace std;
 
 #define INF std::numeric_limits<double>::max()
@@ -91,6 +92,7 @@ class Graph {
     //for Floyd-Warshall
     vector<vector<double>> W;
     vector<vector<int>> P;
+    int nearDist = 0;
 
 public:
     Vertex* findVertex(int ID) const;
@@ -99,6 +101,8 @@ public:
     int getNumVertex() const;
     vector<Vertex *> getVertexSet() const;
     int findVertexIdx(Vertex* vertex) const;
+    int getnearDist() const;
+    void setnearDist(int nearDist);
 
     //for Floyd-Warshall
     void resetMatrixW(int size);
@@ -123,7 +127,6 @@ public:
     void dijkstraShortestPath(int srcID);
     //shortest path from source to destination
     vector<Vertex *> aStar(const int &origin, const int &dest);
-    double getDistanceAStar(const int &origin, const int &dest);
     //getPath from dijkstra and aStar
     vector<Vertex *> getPath(const int &origin, const int &dest) const;
 
@@ -134,7 +137,7 @@ public:
 
 
 
-    //vector<Vertex *> nearestNeighbour
+    vector<Vertex *> nearNeighborDij(vector<int> destIDS, int stationID);
 
 };
 

@@ -174,6 +174,15 @@ int Graph::nextVertex(int i, int j) const{
     return -1;
 }
 
+int Graph::getnearDist() const{
+    return this->nearDist;
+}
+
+
+void Graph::setnearDist(int nearDist){
+    this->nearDist = nearDist;
+}
+
 
 /*****  ALGORITHMS   *****/
 
@@ -263,28 +272,6 @@ vector<Vertex *> Graph::aStar(const int &origin, const int &dest){
 
 
     return getPath(origin, dest);
-}
-
-double Graph::getDistanceAStar(const int &origin, const int &dest){
-    double res = 0;
-    auto v = findVertex(dest);
-    if (v == nullptr || v->dist == INF) // missing or disconnected
-        return res;
-
-    for ( ; v != nullptr; v = v->path) {
-        for(auto e : v->path->getAdj()){
-            if(e->dest == v){
-                cout <<"before adding" << endl;
-                res += e->weight;
-                cout << "been here res = " << res <<  endl;
-                break;
-            }
-        }
-        cout << "changing outer loop" << endl;
-    }
-
-    cout << "exiting weight add" << endl;
-    return res;
 }
 
 
@@ -407,7 +394,17 @@ bool Graph::dfs(Vertex* src, Vertex* dest){
 
 /*****  Nearest Neighbour   *****/
 
+vector<Vertex *> Graph::nearNeighborDij(vector<int> destIDS, int stationID){
+    int size = destIDS.size();
+    vector<Vertex*> res;
+    int currentID = stationID;
 
+    for(int i = 0; i < size; i++){
+        dijkstraShortestPath(currentID);
+
+    }
+
+}
 
 
 
