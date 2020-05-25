@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/Person.cpp" "/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/cmake-build-debug/CMakeFiles/Proj_2020.dir/Person.cpp.o"
   "/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/UserInterface.cpp" "/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/cmake-build-debug/CMakeFiles/Proj_2020.dir/UserInterface.cpp.o"
   "/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/main.cpp" "/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/cmake-build-debug/CMakeFiles/Proj_2020.dir/main.cpp.o"
+  "/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/timeMeasure.cpp" "/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/cmake-build-debug/CMakeFiles/Proj_2020.dir/timeMeasure.cpp.o"
   "/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/utils.cpp" "/Users/lisandraleal/Desktop/CAL_PROJ/Proj_2020/cmake-build-debug/CMakeFiles/Proj_2020.dir/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

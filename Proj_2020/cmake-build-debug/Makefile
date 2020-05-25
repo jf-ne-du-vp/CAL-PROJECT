@@ -420,6 +420,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+timeMeasure.o: timeMeasure.cpp.o
+
+.PHONY : timeMeasure.o
+
+# target to build an object file
+timeMeasure.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/timeMeasure.cpp.o
+.PHONY : timeMeasure.cpp.o
+
+timeMeasure.i: timeMeasure.cpp.i
+
+.PHONY : timeMeasure.i
+
+# target to preprocess a source file
+timeMeasure.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/timeMeasure.cpp.i
+.PHONY : timeMeasure.cpp.i
+
+timeMeasure.s: timeMeasure.cpp.s
+
+.PHONY : timeMeasure.s
+
+# target to generate assembly for a file
+timeMeasure.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj_2020.dir/build.make CMakeFiles/Proj_2020.dir/timeMeasure.cpp.s
+.PHONY : timeMeasure.cpp.s
+
 utils.o: utils.cpp.o
 
 .PHONY : utils.o
@@ -489,6 +516,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... timeMeasure.o"
+	@echo "... timeMeasure.i"
+	@echo "... timeMeasure.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"

@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Proj_2020.dir/Person.cpp.o"
   "CMakeFiles/Proj_2020.dir/UserInterface.cpp.o"
   "CMakeFiles/Proj_2020.dir/main.cpp.o"
+  "CMakeFiles/Proj_2020.dir/timeMeasure.cpp.o"
   "CMakeFiles/Proj_2020.dir/utils.cpp.o"
   "Proj_2020"
   "Proj_2020.pdb"
